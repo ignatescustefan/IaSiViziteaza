@@ -1,0 +1,9 @@
+C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza.DAL.ORC\bin\Debug\IaSiViziteaza.DAL.ORC.dll.config
+C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza.DAL.ORC\bin\Debug\IaSiViziteaza.DAL.ORC.dll
+C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza.DAL.ORC\bin\Debug\IaSiViziteaza.DAL.ORC.pdb
+C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza.DAL.ORC\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza.DAL.ORC\obj\Debug\IaSiViziteaza.DAL.ORC.csprojAssemblyReference.cache
+C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza.DAL.ORC\obj\Debug\IaSiViziteaza.DAL.ORC.csproj.CoreCompileInputs.cache
+C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza.DAL.ORC\obj\Debug\IaSiViziteaza.DAL.ORC.csproj.CopyComplete
+C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza.DAL.ORC\obj\Debug\IaSiViziteaza.DAL.ORC.dll
+C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza.DAL.ORC\obj\Debug\IaSiViziteaza.DAL.ORC.pdb

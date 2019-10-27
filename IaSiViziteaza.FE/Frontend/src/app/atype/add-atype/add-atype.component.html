@@ -1,0 +1,26 @@
+
+<body>
+  <div class="form">
+
+    <p class="sign" align="center">Add an attraction type</p>
+       <div class="form1">
+
+  <label for="ATypeTitle">Attraction Type Title</label>
+  <input type="text" id="attractiontitle" [(ngModel)]="title" class="form-control" placeholder="Enter title">
+
+  <label for="ATypeDescription">Attraction Type Description</label>
+  <input type="text" [(ngModel)]="description" class="form-control" placeholder="Enter description">
+
+  <br>
+      <label for="Image'">Attraction image</label>
+      <br>
+
+      <div class="btnFile">
+         <input type="file" (change)="showPreviewImage($event)">
+      </div>
+      <br>
+      <div class="one" [innerHtml]="htmlToAdd"></div>
+  <button type="submit" class="btn"[disabled]="title.length <= 0"(click)="save()">Save</button>
+  </div>
+</div>
+</body>

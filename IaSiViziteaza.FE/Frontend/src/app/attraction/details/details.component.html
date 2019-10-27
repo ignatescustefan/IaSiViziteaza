@@ -1,0 +1,45 @@
+<div class="panel-body">
+  <ul class="list-group">
+    <div class="container">
+      <h3 style="text-align:left">{{attrTitle}}</h3>
+      <div class="imgBx">
+
+        <img [src]="attrImage" *ngIf="attrImage" style="text-align:center" class="imgPlaceholder">
+      </div>
+    </div>
+    <li class="list-group-item" *ngFor="let comm of comments; let i = index">
+      <div class="row">
+        <div class="col-xs-10 col-md-11">
+          <div>
+            <strong>{{comm.firstNameUser}} {{comm.lastNameUser}}</strong>
+            on
+            <strong>{{ comm.postingDate | date : "medium" }}</strong>
+          </div>
+          <div class="comment-text">
+            <strong>{{ comm.commentContent }}</strong>
+          </div>
+          <div class="action">
+            <button type="button" class="btn" [disabled]="isAuthenticate == 'false'"
+              (click)="addLike(i, comm.commentId)">{{comm.rating}}</button>
+
+          </div>
+        </div>
+
+      </div>
+      <button type="button" class="close" aria-label="Close" *ngIf="isAdmin == 'true'" (click)=delete(comm.commentId)>
+        <span aria-hidden="true">×</span>
+      </button>
+    </li>
+
+  </ul>
+
+  <div *ngIf="isAuthenticate == 'true'">
+    <label for="Comment">Leave your comment...</label>
+    <input type="text" [(ngModel)]="commentContent" class="form-control" placeholder="Enter comment">
+    <button type="submit" class="btn" [disabled]="commentContent.length == 0" (click)="save()">Post</button>
+  </div>
+
+  <div *ngIf="isAuthenticate == 'false'">
+    <label for="Comment">To leave a comment, please login!</label> <br>
+    <button type="submit" class="btn" routerLink="/login">Login</button>
+  </div>

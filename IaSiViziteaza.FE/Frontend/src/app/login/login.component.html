@@ -1,0 +1,21 @@
+
+<body>
+<div class="form">
+  <p class="sign" align="center">Sign in</p>
+  <div class="form1">
+
+  <label for="exampleInputEmail1">Email address</label>
+  <input type="email" [(ngModel)]="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+
+  <label for="exampleInputPassword1">Password</label>
+  <input type="password" [(ngModel)]="password" class="form-control" placeholder="Enter password">
+  <br>
+  <div class="one" [innerHtml]="htmlToAdd"></div>
+  <button type="submit" class="btn" (click)="Login()">Login</button>
+
+  </div>
+</div>
+
+</body>
+
+

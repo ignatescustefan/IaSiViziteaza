@@ -1,0 +1,29 @@
+<body>
+  <div class="form-group">
+
+      <p class="reg" align="center">Register</p>
+
+      <div class="form1">
+      <label class="control-label" for="email">E-mail</label>
+      <input type="email" [(ngModel)]="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+
+      <label class="control-label"  for="nume">Nume</label>
+        <input type="text" [(ngModel)]="nume" class="form-control" placeholder="Enter name">
+
+      <label class="control-label"  for="prenume">Prenume</label>
+        <input type="text" [(ngModel)]="prenume" class="form-control" placeholder="Enter surname">
+
+      <label class="control-label"  for="nrtelefon">Numar telefon</label>
+        <input type="number" [(ngModel)]="nrtelefon" class="form-control" placeholder="Enter phone number">
+
+      <label class="control-label" for="password">Password</label>
+        <input type="password" [(ngModel)]="password" class="form-control" placeholder="Enter password">
+        <small *ngIf="password.length <= 6" class="form-text text-muted">Password too small</small>
+
+      <br>
+      <div class="one" [innerHtml]="htmlToAdd"></div>
+        <button type="submit" class="btn"[disabled]="password.length <= 6" (click)="Register()">Register</button>
+
+      </div>
+  </div>
+</body>

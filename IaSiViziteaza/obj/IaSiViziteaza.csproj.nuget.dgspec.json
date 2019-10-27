@@ -1,0 +1,199 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Stefan\\source\\Workspaces\\Workspace\\IaSiViziteaza\\IaSiViziteaza\\IaSiViziteaza.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Stefan\\source\\Workspaces\\Workspace\\IaSiViziteaza\\IaSiViziteaza.BLL\\IaSiViziteaza.BLL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Stefan\\source\\Workspaces\\Workspace\\IaSiViziteaza\\IaSiViziteaza.BLL\\IaSiViziteaza.BLL.csproj",
+        "projectName": "IaSiViziteaza.BLL",
+        "projectPath": "C:\\Users\\Stefan\\source\\Workspaces\\Workspace\\IaSiViziteaza\\IaSiViziteaza.BLL\\IaSiViziteaza.BLL.csproj",
+        "packagesPath": "C:\\Users\\Stefan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Stefan\\source\\Workspaces\\Workspace\\IaSiViziteaza\\IaSiViziteaza.BLL\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Stefan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\Users\\Stefan\\source\\Workspaces\\Workspace\\IaSiViziteaza\\IaSiViziteaza.DAL\\IaSiViziteaza.DAL.csproj": {
+                "projectPath": "C:\\Users\\Stefan\\source\\Workspaces\\Workspace\\IaSiViziteaza\\IaSiViziteaza.DAL\\IaSiViziteaza.DAL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\Stefan\\source\\Workspaces\\Workspace\\IaSiViziteaza\\IaSiViziteaza.DAL\\IaSiViziteaza.DAL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Stefan\\source\\Workspaces\\Workspace\\IaSiViziteaza\\IaSiViziteaza.DAL\\IaSiViziteaza.DAL.csproj",
+        "projectName": "IaSiViziteaza.DAL",
+        "projectPath": "C:\\Users\\Stefan\\source\\Workspaces\\Workspace\\IaSiViziteaza\\IaSiViziteaza.DAL\\IaSiViziteaza.DAL.csproj",
+        "packagesPath": "C:\\Users\\Stefan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Stefan\\source\\Workspaces\\Workspace\\IaSiViziteaza\\IaSiViziteaza.DAL\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Stefan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[2.2.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[2.2.4, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\Stefan\\source\\Workspaces\\Workspace\\IaSiViziteaza\\IaSiViziteaza\\IaSiViziteaza.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Stefan\\source\\Workspaces\\Workspace\\IaSiViziteaza\\IaSiViziteaza\\IaSiViziteaza.csproj",
+        "projectName": "IaSiViziteaza",
+        "projectPath": "C:\\Users\\Stefan\\source\\Workspaces\\Workspace\\IaSiViziteaza\\IaSiViziteaza\\IaSiViziteaza.csproj",
+        "packagesPath": "C:\\Users\\Stefan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Stefan\\source\\Workspaces\\Workspace\\IaSiViziteaza\\IaSiViziteaza\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Stefan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\Users\\Stefan\\source\\Workspaces\\Workspace\\IaSiViziteaza\\IaSiViziteaza.BLL\\IaSiViziteaza.BLL.csproj": {
+                "projectPath": "C:\\Users\\Stefan\\source\\Workspaces\\Workspace\\IaSiViziteaza\\IaSiViziteaza.BLL\\IaSiViziteaza.BLL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.AspNetCore.Razor.Design": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[2.2.3, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[4.0.1, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

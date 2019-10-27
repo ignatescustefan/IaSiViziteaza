@@ -1,0 +1,49 @@
+<body>
+  <div class="form">
+    <p class="sign" align="center">Add an attraction</p>
+
+    <div class="form1">
+
+      <label for="AttractionTitle">Attraction Type Title</label>
+      <div class="form-group">
+        <select class="form-control" [(ngModel)]="title" id="ControlSelect">
+          <option *ngFor="let attraction of attractiontypes">{{attraction.title}}</option>
+        </select>
+      </div>
+      <label for="Name">Attraction Name</label>
+      <input type="text" id="attractionname" [(ngModel)]="name" class="form-control" placeholder="Enter name">
+      <label for="Description">Attraction Description</label>
+      <input type="text" [(ngModel)]="description" class="form-control" placeholder="Enter description">
+
+
+      <label for="PhoneNumber">Phone Number</label>
+      <input type="number" [(ngModel)]="phoneNumber" class="form-control" placeholder="Enter phone number">
+
+      <label for="Adress">Attraction Adress</label>
+      <input type="text" [(ngModel)]="address" class="form-control" placeholder="Enter adress">
+
+      <label for="Adress">Attraction Postal Code</label>
+      <input type="number" [(ngModel)]="postalCode" class="form-control" placeholder="Enter postalCode">
+
+      <br>
+      <label for="Image'">Attraction image</label>
+      <br>
+
+      <div class="btnFile">
+        <input type="file" (change)="showPreviewImage($event)">
+      </div>
+
+      <br>
+      <br>
+      <label for="opentime">Attraction OpenTime</label>
+      <input type="time" [(ngModel)]="openTime" class="form-control" placeholder="Enter OpenTime">
+
+
+      <label for="closetime">Attraction CloseTime</label>
+      <input type="time" [(ngModel)]="closeTime" class="form-control" placeholder="Enter CloseTime">
+      <br>
+      <div class="one" [innerHtml]="htmlToAdd"></div>
+      <button type="submit" class="btn"  (click)="save()">Save</button>
+    </div>
+  </div>
+</body>

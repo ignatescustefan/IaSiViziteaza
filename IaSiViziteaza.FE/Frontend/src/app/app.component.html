@@ -1,0 +1,80 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" routerLink="/">IaSiViziteaza</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+          Attraction type
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown" >
+          <a class="dropdown-item" routerLink="/attrtype">List</a>
+          <a class="dropdown-item" routerLink="/attrtype/add" *ngIf="isAdmin !== 'false'">Add</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+          Attractions
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" routerLink="/attractions">List</a>
+          <a class="dropdown-item" routerLink="/attractions/add" *ngIf="isAdmin !== 'false'">Add</a>
+        </div>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav ml-auto" *ngIf="isLoggedin=='false'">
+      <li class="nav-item mr-auto">
+        <a class="nav-link" routerLink="/login">Login</a>
+      </li>
+      <li class="nav-item mr-auto">
+        <a class="nav-link" routerLink="/register">Register</a>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav ml-auto" *ngIf="isLoggedin=='true'">
+      <li class="nav-item mr-auto" >
+        <a class = "navbar-text" > {{firstName}} {{lastName}} {{phoneNumber}} </a>
+      </li>
+      <li class="nav-item mr-auto">
+        <button routerLink="/update"  class="btn" aria-label="Left Align">
+          Update
+        </button>
+      </li>
+      <li class="nav-item mr-auto">
+        <button (click)="logout()" class="btn" aria-label="Left Align">
+          Log out
+        </button>
+      </li>
+    </ul>
+
+  </div>
+</nav>
+
+
+
+
+<router-outlet></router-outlet>
+
+
+
+<!--
+<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
+		<footer class="pt-5 pb-4" id="contact" >
+						<ul class="social-pet mt-4" >
+							<li><a href="#" title="facebook"><i class="fab fa-facebook-f"></i></a></li>
+							<li><a href="#" title="twitter"><i class="fab fa-twitter"></i></a></li>
+							<li><a href="#" title="google-plus"><i class="fab fa-google-plus-g"></i></a></li>
+							<li><a href="#" title="instagram"><i class="fab fa-instagram"></i></a></li>
+						</ul>
+		</footer>
+  -->

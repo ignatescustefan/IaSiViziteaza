@@ -1,0 +1,17 @@
+<h1 style="text-align:center">ATTRACTIONS TYPE LIST</h1>
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let attrtype of attractiontypes">
+    <h1 style="text-align:center">{{ attrtype.title }}</h1>
+    <div align="right">
+        <p><button type="button" aria-label="Close" *ngIf="isAdmin == 'true'" (click)=delete(attrtype.id)> <span
+              aria-hidden="true">×</span></button></p>
+      </div>
+    <div class="card">
+      <img [src]="attrtype.imagePath" *ngIf="attrtype.imagePath" class="imgPlaceholder">
+      <p> {{attrtype.description}}</p>
+      <p><button type="button" [routerLink]="[attrtype.title]">Get Attration Type</button></p>
+    </div>
+  </li>
+</ul>
+
+<button type="button" class="test"*ngIf="isAdmin == 'true'" routerLink="/attrtype/add">ADD ATTRACTION TYPE</button>

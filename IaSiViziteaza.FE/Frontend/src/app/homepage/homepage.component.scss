@@ -1,0 +1,12 @@
+
+
+.fit-image{
+  width: 100%;
+  object-fit: contain;
+  height: calc(100vh - 56px);
+  background-size: cover;
+}
+.carousel-control-next-icon, .carousel-control-prev-icon {
+  background-color:black;
+  color:black;
+}

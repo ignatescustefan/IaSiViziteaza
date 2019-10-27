@@ -1,0 +1,17 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace IaSiViziteaza.DAL.ORC
+{
+    public class Comment : BaseEntity
+    {
+        public Attraction Attraction { get; set; }
+        public User User { get; set; }
+        public string CommentContent { get; set; }
+        public DateTime PostingDate { get; set; }
+        public double Rating { get; set; }
+    }
+}
