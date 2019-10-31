@@ -36,3 +36,7 @@ C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza\obj\Debug\netcoreapp2.2\IaSiV
 C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza\obj\Debug\netcoreapp2.2\IaSiViziteaza.csproj.CopyComplete
 C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza\obj\Debug\netcoreapp2.2\IaSiViziteaza.dll
 C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza\obj\Debug\netcoreapp2.2\IaSiViziteaza.pdb
+C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza\bin\Debug\netcoreapp2.2\IaSiViziteaza.DAL.ORC.dll
+C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza\bin\Debug\netcoreapp2.2\Oracle.ManagedDataAccess.dll
+C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza\bin\Debug\netcoreapp2.2\IaSiViziteaza.DAL.ORC.pdb
+C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza\bin\Debug\netcoreapp2.2\IaSiViziteaza.DAL.ORC.dll.config

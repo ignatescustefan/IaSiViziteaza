@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\IaSiViziteaza.BLL\IaSiViziteaza.BLL.csproj" />
+    <ProjectReference Include="..\IaSiViziteaza.DAL.ORC\IaSiViziteaza.DAL.ORC.csproj" />
   </ItemGroup>
 
 </Project>

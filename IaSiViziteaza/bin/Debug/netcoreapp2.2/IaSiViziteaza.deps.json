@@ -25,6 +25,7 @@
       "IaSiViziteaza/1.0.0": {
         "dependencies": {
           "IaSiViziteaza.BLL": "1.0.0",
+          "IaSiViziteaza.DAL.ORC": "1.0.0",
           "Microsoft.AspNetCore.App": "2.2.0",
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
           "Microsoft.NETCore.App": "2.2.0",
@@ -542,6 +543,25 @@
         },
         "compile": {
           "IaSiViziteaza.DAL.dll": {}
+        }
+      },
+      "IaSiViziteaza.DAL.ORC/1.0.0": {
+        "dependencies": {
+          "Oracle.ManagedDataAccess": "4.122.19.1"
+        },
+        "runtime": {
+          "IaSiViziteaza.DAL.ORC.dll": {}
+        },
+        "compile": {
+          "IaSiViziteaza.DAL.ORC.dll": {}
+        }
+      },
+      "Oracle.ManagedDataAccess.Reference/4.122.19.1": {
+        "runtime": {
+          "Oracle.ManagedDataAccess.dll": {
+            "assemblyVersion": "4.122.19.1",
+            "fileVersion": "4.122.19.1"
+          }
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -3883,6 +3903,16 @@
     },
     "IaSiViziteaza.DAL/1.0.0": {
       "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "IaSiViziteaza.DAL.ORC/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Oracle.ManagedDataAccess.Reference/4.122.19.1": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     },
