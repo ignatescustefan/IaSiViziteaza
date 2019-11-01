@@ -12,6 +12,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\IaSiViziteaza.DAL.ORC\IaSiViziteaza.DAL.ORC.csproj" />
     <ProjectReference Include="..\IaSiViziteaza.DAL\IaSiViziteaza.DAL.csproj" />
   </ItemGroup>
 

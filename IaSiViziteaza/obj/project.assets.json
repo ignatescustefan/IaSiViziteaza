@@ -4782,7 +4782,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
         "dependencies": {
-          "IaSiViziteaza.DAL": "1.0.0"
+          "IaSiViziteaza.DAL": "1.0.0",
+          "IaSiViziteaza.DAL.ORC": "1.0.0"
         },
         "compile": {
           "bin/placeholder/IaSiViziteaza.BLL.dll": {}

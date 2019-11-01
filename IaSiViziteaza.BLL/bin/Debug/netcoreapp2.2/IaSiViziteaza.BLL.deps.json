@@ -8,7 +8,8 @@
     ".NETCoreApp,Version=v2.2": {
       "IaSiViziteaza.BLL/1.0.0": {
         "dependencies": {
-          "IaSiViziteaza.DAL": "1.0.0"
+          "IaSiViziteaza.DAL": "1.0.0",
+          "IaSiViziteaza.DAL.ORC": "1.0.0"
         },
         "runtime": {
           "IaSiViziteaza.BLL.dll": {}
@@ -508,6 +509,22 @@
         "runtime": {
           "IaSiViziteaza.DAL.dll": {}
         }
+      },
+      "IaSiViziteaza.DAL.ORC/1.0.0": {
+        "dependencies": {
+          "Oracle.ManagedDataAccess": "4.122.19.1"
+        },
+        "runtime": {
+          "IaSiViziteaza.DAL.ORC.dll": {}
+        }
+      },
+      "Oracle.ManagedDataAccess.Reference/4.122.19.1": {
+        "runtime": {
+          "Oracle.ManagedDataAccess.dll": {
+            "assemblyVersion": "4.122.19.1",
+            "fileVersion": "4.122.19.1"
+          }
+        }
       }
     }
   },
@@ -890,6 +907,16 @@
     },
     "IaSiViziteaza.DAL/1.0.0": {
       "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "IaSiViziteaza.DAL.ORC/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Oracle.ManagedDataAccess.Reference/4.122.19.1": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }

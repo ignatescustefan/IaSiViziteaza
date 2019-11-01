@@ -524,7 +524,8 @@
       },
       "IaSiViziteaza.BLL/1.0.0": {
         "dependencies": {
-          "IaSiViziteaza.DAL": "1.0.0"
+          "IaSiViziteaza.DAL": "1.0.0",
+          "IaSiViziteaza.DAL.ORC": "1.0.0"
         },
         "runtime": {
           "IaSiViziteaza.BLL.dll": {}

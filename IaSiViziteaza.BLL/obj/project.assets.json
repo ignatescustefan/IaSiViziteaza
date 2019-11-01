@@ -920,6 +920,15 @@
         "runtime": {
           "bin/placeholder/IaSiViziteaza.DAL.dll": {}
         }
+      },
+      "IaSiViziteaza.DAL.ORC/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/IaSiViziteaza.DAL.ORC.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/IaSiViziteaza.DAL.ORC.dll": {}
+        }
       }
     }
   },
@@ -3476,11 +3485,17 @@
       "type": "project",
       "path": "../IaSiViziteaza.DAL/IaSiViziteaza.DAL.csproj",
       "msbuildProject": "../IaSiViziteaza.DAL/IaSiViziteaza.DAL.csproj"
+    },
+    "IaSiViziteaza.DAL.ORC/1.0.0": {
+      "type": "project",
+      "path": "../IaSiViziteaza.DAL.ORC/IaSiViziteaza.DAL.ORC.csproj",
+      "msbuildProject": "../IaSiViziteaza.DAL.ORC/IaSiViziteaza.DAL.ORC.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
       "IaSiViziteaza.DAL >= 1.0.0",
+      "IaSiViziteaza.DAL.ORC >= 1.0.0",
       "Microsoft.NETCore.App >= 2.2.0"
     ]
   },
@@ -3514,6 +3529,9 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
+            "C:\\Users\\Stefan\\Desktop\\PSBD-Proiect\\IaSiViziteaza.DAL.ORC\\IaSiViziteaza.DAL.ORC.csproj": {
+              "projectPath": "C:\\Users\\Stefan\\Desktop\\PSBD-Proiect\\IaSiViziteaza.DAL.ORC\\IaSiViziteaza.DAL.ORC.csproj"
+            },
             "C:\\Users\\Stefan\\Desktop\\PSBD-Proiect\\IaSiViziteaza.DAL\\IaSiViziteaza.DAL.csproj": {
               "projectPath": "C:\\Users\\Stefan\\Desktop\\PSBD-Proiect\\IaSiViziteaza.DAL\\IaSiViziteaza.DAL.csproj"
             }

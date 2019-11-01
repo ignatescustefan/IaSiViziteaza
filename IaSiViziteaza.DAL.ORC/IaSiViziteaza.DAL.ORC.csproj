@@ -32,8 +32,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.19.1, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
-      <HintPath>..\packages\Oracle.ManagedDataAccess.19.5.0\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+    <Reference Include="Oracle.ManagedDataAccess, Version=2.0.19.1, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.Core.2.19.50\lib\netstandard2.0\Oracle.ManagedDataAccess.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -41,12 +41,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstraction\IRepositoryORC.cs" />
     <Compile Include="AccessRight.cs" />
     <Compile Include="AttractionType.cs" />
     <Compile Include="BaseEntity.cs" />
     <Compile Include="Attraction.cs" />
     <Compile Include="Comment.cs" />
     <Compile Include="DataBaseConnection.cs" />
+    <Compile Include="Implementations\RepositoryORC.cs" />
     <Compile Include="Location.cs" />
     <Compile Include="User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

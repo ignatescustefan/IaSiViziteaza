@@ -2125,7 +2125,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
         "dependencies": {
-          "IaSiViziteaza.DAL": "1.0.0"
+          "IaSiViziteaza.DAL": "1.0.0",
+          "IaSiViziteaza.DAL.ORC": "1.0.0"
         },
         "compile": {
           "bin/placeholder/IaSiViziteaza.BLL.dll": {}
@@ -2146,6 +2147,15 @@
         },
         "runtime": {
           "bin/placeholder/IaSiViziteaza.DAL.dll": {}
+        }
+      },
+      "IaSiViziteaza.DAL.ORC/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/IaSiViziteaza.DAL.ORC.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/IaSiViziteaza.DAL.ORC.dll": {}
         }
       }
     }
@@ -7266,6 +7276,11 @@
       "type": "project",
       "path": "../IaSiViziteaza.DAL/IaSiViziteaza.DAL.csproj",
       "msbuildProject": "../IaSiViziteaza.DAL/IaSiViziteaza.DAL.csproj"
+    },
+    "IaSiViziteaza.DAL.ORC/1.0.0": {
+      "type": "project",
+      "path": "../IaSiViziteaza.DAL.ORC/IaSiViziteaza.DAL.ORC.csproj",
+      "msbuildProject": "../IaSiViziteaza.DAL.ORC/IaSiViziteaza.DAL.ORC.csproj"
     }
   },
   "projectFileDependencyGroups": {

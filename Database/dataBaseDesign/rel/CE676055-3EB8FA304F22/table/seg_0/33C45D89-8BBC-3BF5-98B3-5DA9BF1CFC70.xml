@@ -40,7 +40,6 @@
 <createdTime>2019-10-17 08:17:12 UTC</createdTime>
 <generatorID>35D4604F-6052-A072-59E6-E315DC2BD58F</generatorID>
 <ownerDesignName>dataBaseDesign</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>

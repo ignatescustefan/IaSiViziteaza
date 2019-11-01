@@ -1,6 +1,8 @@
 ﻿using IaSiViziteaza.BLL.Abstractions;
 using IaSiViziteaza.DAL;
 using IaSiViziteaza.DAL.Abstraction;
+
+using IaSiViziteaza.DAL.ORC.Abstraction;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -10,9 +12,11 @@ namespace IaSiViziteaza.BLL.Implementations
     public class AttractionTypeBussines: IAttractionTypeBusiness
     {
         private readonly IRepository _repository;
-        public AttractionTypeBussines(IRepository repository)
+        private readonly IRepositoryORC _repositoryORC;
+        public AttractionTypeBussines(IRepository repository,IRepositoryORC repositoryORC)
         {
             _repository = repository;
+            _repositoryORC = repositoryORC;
         }
 
         public bool AddAttractionType(AttractionType attractionType)
@@ -21,6 +25,14 @@ namespace IaSiViziteaza.BLL.Implementations
                 return false;
             _repository.Add<AttractionType>(attractionType);
             return true;
+        }
+
+    
+
+        public void AddAttractionType(DAL.ORC.AttractionType attractionType, bool val)
+        {
+            _repositoryORC.AddAttractionType(attractionType);
+
         }
 
         public bool CheckUserPriority(string email)

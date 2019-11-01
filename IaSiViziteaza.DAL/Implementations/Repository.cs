@@ -19,6 +19,8 @@ namespace IaSiViziteaza.DAL.Implementations
         public void Add<TEntity>(TEntity entity) where TEntity : class
         {
            //if(databaseContext.Users.Contains)
+
+           
            databaseContext.Add(entity);
            databaseContext.SaveChanges();
         }
@@ -180,7 +182,6 @@ namespace IaSiViziteaza.DAL.Implementations
             x.PhoneNumber = user.PhoneNumber;
             databaseContext.Users.Update(x);
             databaseContext.SaveChanges();
-
         }
     }
 }
