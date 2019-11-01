@@ -1,0 +1,59 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="1855EB1C-0CB7-60E6-F963-6A51CA170223" name="ACCES_RIGHT">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-10-11 09:32:54 UTC</createdTime>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+<engineerTo>
+<item key="CE676055-8FEC-22B0-04AE-3EB8FA304F22" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_acces_right" id="5E86B0B1-967F-F6AC-69EB-610773761120">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-10-11 09:33:35 UTC</createdTime>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+<engineerTo>
+<item key="CE676055-8FEC-22B0-04AE-3EB8FA304F22" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="user_priority" id="3B19EC24-39E7-51F8-D4D3-1215A96A08CC">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-10-11 09:39:17 UTC</createdTime>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+<engineerTo>
+<item key="CE676055-8FEC-22B0-04AE-3EB8FA304F22" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="AB2430B6-E2B6-CA71-1FAE-F920F635A3E8" name="ACCES_RIGHT PK">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-10-11 09:39:13 UTC</createdTime>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+<engineerTo>
+<item key="CE676055-8FEC-22B0-04AE-3EB8FA304F22" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>5E86B0B1-967F-F6AC-69EB-610773761120</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,50 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="ATTRACTION_TYPE" directorySegmentName="seg_0" id="B8474494-207A-A5DA-AE14-706FF2BEF164">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-11-01 14:30:07 UTC</createdTime>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="image_path" id="0E6F840E-8ABA-7EFC-35DC-778D1477676F">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-11-01 14:30:07 UTC</createdTime>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="description" id="42BE1436-0CC0-CA77-E1A1-3EA2590AB91B">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-11-01 14:30:07 UTC</createdTime>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="id_attraction_type" id="66DF567F-95FD-5CB7-44DE-E937C4DA7994">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-11-01 14:30:07 UTC</createdTime>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+<autoIncrementDDL>IDENTITY_CLAUSE</autoIncrementDDL>
+</ColumnProxy>
+<ColumnProxy name="title" id="A8BB494E-F0F8-8DEE-D36B-6021736A534A">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-11-01 14:30:07 UTC</createdTime>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="ATTRACTION_TYPE_PK" id="56115599-5089-CD55-1CD3-E114CB7EC694">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-11-01 14:30:07 UTC</createdTime>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+<uniqueKeys>
+<UniqueKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UniqueOraclev10g" name="ATTRACTION_TYPE_TITLE_UN" id="A660E050-A502-0216-9D06-A333886F0EFE">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-11-01 14:30:07 UTC</createdTime>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</UniqueKey>
+</uniqueKeys>
+</TableProxyOraclev12c>

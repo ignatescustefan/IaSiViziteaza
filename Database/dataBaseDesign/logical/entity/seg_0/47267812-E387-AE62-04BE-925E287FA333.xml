@@ -1,0 +1,85 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="47267812-E387-AE62-04BE-925E287FA333" name="ATTRACTION_TYPE">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-10-13 05:49:40 UTC</createdTime>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+<engineerTo>
+<item key="CE676055-8FEC-22B0-04AE-3EB8FA304F22" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_attraction_type" id="72ADD641-4329-881A-4116-6D1ECF48D963">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-10-13 05:51:01 UTC</createdTime>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+<engineerTo>
+<item key="CE676055-8FEC-22B0-04AE-3EB8FA304F22" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="title" id="2BC9E5B1-B4CF-2103-6026-94C9F9F6EB47">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-10-13 05:51:02 UTC</createdTime>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+<engineerTo>
+<item key="CE676055-8FEC-22B0-04AE-3EB8FA304F22" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="description" id="00A49582-56AA-C952-1C63-6CF7014A19A0">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-10-13 05:51:02 UTC</createdTime>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+<engineerTo>
+<item key="CE676055-8FEC-22B0-04AE-3EB8FA304F22" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+<ownDataTypeParameters>60,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="image_path" id="CE105BFD-7825-6C7F-B3D3-6553DB93CB80">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-10-13 05:59:03 UTC</createdTime>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+<engineerTo>
+<item key="CE676055-8FEC-22B0-04AE-3EB8FA304F22" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="E1614713-BFBA-90D5-0963-E67AF14DAD2E" name="ATTRACTION_TYPE PK">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-10-13 05:56:54 UTC</createdTime>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+<engineerTo>
+<item key="CE676055-8FEC-22B0-04AE-3EB8FA304F22" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>72ADD641-4329-881A-4116-6D1ECF48D963</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

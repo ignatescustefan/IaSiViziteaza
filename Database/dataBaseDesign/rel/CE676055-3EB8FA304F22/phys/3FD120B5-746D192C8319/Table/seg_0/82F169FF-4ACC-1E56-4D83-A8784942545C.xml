@@ -1,0 +1,43 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="USER_TO_RIGHT" directorySegmentName="seg_0" id="82F169FF-4ACC-1E56-4D83-A8784942545C">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-11-01 14:30:07 UTC</createdTime>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="USER_id_user" id="666B1117-2B47-2678-48D7-561906F1B871">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-11-01 14:30:07 UTC</createdTime>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ACCES_RIGHT_id_acces_right" id="FC34D015-62F0-84A5-E130-6330BCD3FE45">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-11-01 14:30:07 UTC</createdTime>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="USER_TO_RIGHT_USER_FK" id="212BA2D1-F1EC-E8E1-2AF5-3B0C0BFF375E">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-11-01 14:30:07 UTC</createdTime>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="USER_TO_RIGHT_ACCES_RIGHT_FK" id="6B497772-1276-76D6-9629-265FD704AE34">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-11-01 14:30:07 UTC</createdTime>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="USER_TO_RIGHT_PK" id="FA896FA4-C18F-2301-05C2-6CD2AF6AB7B4">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-11-01 14:30:07 UTC</createdTime>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

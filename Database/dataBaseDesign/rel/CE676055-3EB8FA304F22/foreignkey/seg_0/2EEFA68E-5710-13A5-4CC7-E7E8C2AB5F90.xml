@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="2EEFA68E-5710-13A5-4CC7-E7E8C2AB5F90" containerWithKeyObject="82F169FF-4ACC-1E56-4D83-A8784942545C" localFKIndex="6B497772-1276-76D6-9629-265FD704AE34" name="USER_TO_RIGHT_ACCES_RIGHT_FK">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-10-17 08:17:12 UTC</createdTime>
+<generatorID>559A30AF-0193-43BB-C21C-36E9F010642C</generatorID>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+<referredTableLongName>ACCES_RIGHT</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>9E15A0AA-6D8B-A99A-2FB5-2730C9B5B592</referredTableID>
+<keyObject>32108BC4-3569-55F5-57E6-BDFCB1716329</keyObject>
+<referredKeyID>32108BC4-3569-55F5-57E6-BDFCB1716329</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_acces_right</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

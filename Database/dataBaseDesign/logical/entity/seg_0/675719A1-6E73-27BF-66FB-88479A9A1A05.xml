@@ -1,0 +1,101 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="675719A1-6E73-27BF-66FB-88479A9A1A05" name="COMMENT">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-10-11 09:42:49 UTC</createdTime>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+<engineerTo>
+<item key="CE676055-8FEC-22B0-04AE-3EB8FA304F22" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_comment" id="2E99C7B1-0629-F06F-0F39-943791958B91">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-10-11 09:43:49 UTC</createdTime>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+<engineerTo>
+<item key="CE676055-8FEC-22B0-04AE-3EB8FA304F22" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="comment_content" id="7FE2F865-22F8-1F3B-9C02-BAA935A2F782">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-10-11 09:44:56 UTC</createdTime>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+<engineerTo>
+<item key="CE676055-8FEC-22B0-04AE-3EB8FA304F22" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="posting_date" id="73A5827A-289D-6B34-B857-6C582A241FCE">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-10-11 09:45:41 UTC</createdTime>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+<engineerTo>
+<item key="CE676055-8FEC-22B0-04AE-3EB8FA304F22" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_user" id="BC9E72D4-FD39-81D6-C80A-2DDAF506AC9B">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-10-13 11:41:27 UTC</createdTime>
+<generatorID>D6B5BADE-AC4A-C0B8-0F90-1A315169AFCD</generatorID>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+<engineerTo>
+<item key="CE676055-8FEC-22B0-04AE-3EB8FA304F22" value="true"/>
+</engineerTo>
+<referedAttribute>971DCD15-1A25-5D18-8958-718AD7233074</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_attraction" id="81F0581F-45F6-B2B4-D4C8-338021E35BCE">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-10-13 11:43:09 UTC</createdTime>
+<generatorID>F85CB7DC-458D-5FF5-3385-FB83DC3B0375</generatorID>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+<engineerTo>
+<item key="CE676055-8FEC-22B0-04AE-3EB8FA304F22" value="true"/>
+</engineerTo>
+<referedAttribute>E88CFCCD-BE61-E8C0-970F-B81964C9875D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="16E39B7E-E459-38E7-0B48-9BD82CE0E154" name="COMMENT PK">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-10-11 09:44:51 UTC</createdTime>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+<engineerTo>
+<item key="CE676055-8FEC-22B0-04AE-3EB8FA304F22" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>2E99C7B1-0629-F06F-0F39-943791958B91</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

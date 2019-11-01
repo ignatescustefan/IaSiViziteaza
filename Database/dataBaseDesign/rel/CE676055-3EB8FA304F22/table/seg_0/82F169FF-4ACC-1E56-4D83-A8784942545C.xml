@@ -1,0 +1,77 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="82F169FF-4ACC-1E56-4D83-A8784942545C" name="USER_TO_RIGHT">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-10-17 08:17:12 UTC</createdTime>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="USER_id_user" id="666B1117-2B47-2678-48D7-561906F1B871">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-10-17 08:17:12 UTC</createdTime>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F71D5AAB-9AF5-1857-42CD-B848F912BEFB" referredColumn="E52427F9-7F8E-1E62-B46C-293801449B42"/>
+</associations>
+</Column>
+<Column name="ACCES_RIGHT_id_acces_right" id="FC34D015-62F0-84A5-E130-6330BCD3FE45">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-10-17 08:17:12 UTC</createdTime>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2EEFA68E-5710-13A5-4CC7-E7E8C2AB5F90" referredColumn="982AAFFF-EED3-0987-BB34-53BCD1E81C35"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="FA896FA4-C18F-2301-05C2-6CD2AF6AB7B4" name="USER_TO_RIGHT_PK">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-10-17 08:17:12 UTC</createdTime>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="666B1117-2B47-2678-48D7-561906F1B871"/>
+<colUsage columnID="FC34D015-62F0-84A5-E130-6330BCD3FE45"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="212BA2D1-F1EC-E8E1-2AF5-3B0C0BFF375E" name="USER_TO_RIGHT_USER_FK">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-10-17 08:17:12 UTC</createdTime>
+<generatorID>559A30AF-0193-43BB-C21C-36E9F010642C</generatorID>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="666B1117-2B47-2678-48D7-561906F1B871"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6B497772-1276-76D6-9629-265FD704AE34" name="USER_TO_RIGHT_ACCES_RIGHT_FK">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-10-17 08:17:12 UTC</createdTime>
+<generatorID>559A30AF-0193-43BB-C21C-36E9F010642C</generatorID>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FC34D015-62F0-84A5-E130-6330BCD3FE45"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

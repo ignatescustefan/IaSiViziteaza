@@ -1,0 +1,53 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9E15A0AA-6D8B-A99A-2FB5-2730C9B5B592" name="ACCES_RIGHT">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-10-17 08:17:12 UTC</createdTime>
+<generatorID>1855EB1C-0CB7-60E6-F963-6A51CA170223</generatorID>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_acces_right" id="982AAFFF-EED3-0987-BB34-53BCD1E81C35">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-10-17 08:17:12 UTC</createdTime>
+<generatorID>5E86B0B1-967F-F6AC-69EB-610773761120</generatorID>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementGenerateTrigger>false</autoIncrementGenerateTrigger>
+</Column>
+<Column name="user_priority" id="FCE8D846-FE59-1536-01DD-E943960C9933">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-10-17 08:17:12 UTC</createdTime>
+<generatorID>3B19EC24-39E7-51F8-D4D3-1215A96A08CC</generatorID>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="32108BC4-3569-55F5-57E6-BDFCB1716329" name="ACCES_RIGHT_PK">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-10-17 08:17:12 UTC</createdTime>
+<generatorID>AB2430B6-E2B6-CA71-1FAE-F920F635A3E8</generatorID>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="982AAFFF-EED3-0987-BB34-53BCD1E81C35"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

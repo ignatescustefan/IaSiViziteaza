@@ -1,0 +1,113 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="70D7603B-314B-8236-5C59-48623834447D" name="USER">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-10-17 08:17:12 UTC</createdTime>
+<generatorID>8CF75D65-E5E3-DAE9-9AC2-2BF6F1197790</generatorID>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_user" id="E52427F9-7F8E-1E62-B46C-293801449B42">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-10-17 08:17:12 UTC</createdTime>
+<generatorID>971DCD15-1A25-5D18-8958-718AD7233074</generatorID>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementGenerateTrigger>false</autoIncrementGenerateTrigger>
+</Column>
+<Column name="first_name" id="05CFCA42-6246-E0CA-1E83-7BB21C795D6C">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-10-17 08:17:12 UTC</createdTime>
+<generatorID>B1572A9F-A314-8014-2BCF-B6E72E6CD643</generatorID>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<ownDataTypeParameters>40,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="last_name" id="8214F6AE-B7B8-D9F8-7EAE-E05DAE787702">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-10-17 08:17:12 UTC</createdTime>
+<generatorID>61A605F5-5800-029C-48F5-4D5D720C189C</generatorID>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="email" id="F14C6E83-CAF0-B62E-CC54-6F7E75E4E7B4">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-10-17 08:17:12 UTC</createdTime>
+<generatorID>90DE6144-2CDE-074E-F869-DADC0295E6C3</generatorID>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="password" id="09952607-D61D-7A89-5BF6-FC929EFF27AC">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-10-17 08:17:12 UTC</createdTime>
+<generatorID>5DECC4F0-4709-B7D2-7367-55FEEB4ABF2C</generatorID>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0C28A112-D7B1-6A74-10D7-3B9E5051E18F" name="USER_PK">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-10-17 08:17:12 UTC</createdTime>
+<generatorID>184A2296-A833-FCBB-80D7-FD7DFFFD36D9</generatorID>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E52427F9-7F8E-1E62-B46C-293801449B42"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AD626A8B-0AB7-0700-E6BC-FAD2434AD30E" name="USER_EMAIL_UN">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-10-17 08:32:44 UTC</createdTime>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F14C6E83-CAF0-B62E-CC54-6F7E75E4E7B4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="USER_CK_EMAIL" directorySegmentName="seg_0" id="99EC2AA0-A9EB-2C27-3239-6BC325D35DAE">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-10-17 08:33:09 UTC</createdTime>
+<ownerDesignName>Proiectv1</ownerDesignName>
+<rule><![CDATA[regexp_like(email, '[a-z0-9._%-]+@[a-z0-9._%-]+\.[a-z]{2,4}')]]></rule>
+</tableCheckConstraint>
+<tableCheckConstraint name="USER_CK_PASSWORD" directorySegmentName="seg_0" id="DB2C7916-D05D-C45C-65E8-D280B82A378A">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-10-17 08:33:44 UTC</createdTime>
+<ownerDesignName>Proiectv1</ownerDesignName>
+<rule><![CDATA[LENGTH(password) >=6]]></rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
+</Table>
