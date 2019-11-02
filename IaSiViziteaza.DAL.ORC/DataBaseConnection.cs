@@ -10,9 +10,8 @@ namespace IaSiViziteaza.DAL.ORC
 {
     public class DataBaseConnection
     {
-        //Singleton 
 
-        private static String constr = null; //holds tnsnames.ora statemnt
+        private static string constr = null;
 
 
 
@@ -34,10 +33,6 @@ namespace IaSiViziteaza.DAL.ORC
             return dbInstance;
         }
 
-        /// <summary>
-        /// this returns an oracle connection created using the connection string
-        /// </summary>
-        /// <returns>oracle connection</returns>
         public OracleConnection GetDBConnection()
         {
             try
@@ -45,49 +40,42 @@ namespace IaSiViziteaza.DAL.ORC
                 createConnectionstring();
                 conn = new OracleConnection(constr);
                 conn.Open();
-                Console.WriteLine("Connected");
+                System.Diagnostics.Debug.WriteLine("Connected");
             }
             catch (OracleException e)
             {
-                Console.WriteLine("Not connected : " + e.ToString());
-                Console.ReadLine();
+                System.Diagnostics.Debug.WriteLine("Not connected : " + e.ToString());
             }
 
             return conn;
         }
 
-        /// <summary>
-        /// this closes the created database connection
-        /// </summary>
         public void closeDBConnection()
         {
             try
             {
                 conn.Close();
-                Console.WriteLine("Connection closed");
+                System.Diagnostics.Debug.WriteLine("Connection closed");
             }
             catch (OracleException e)
             {
-                Console.WriteLine("Connection closed failed : " + e.ToString());
+                System.Diagnostics.Debug.WriteLine("Connection closed failed : " + e.ToString());
 
             }
             finally
             {
-                Console.WriteLine("End..");
+                System.Diagnostics.Debug.WriteLine("End..");
 
             }
 
         }
 
-        /// <summary>
-        /// Read the configurations.xml in order to create the connection string
-        /// </summary>
         public static void createConnectionstring()
         {
 
             try
             {
-                Console.WriteLine("Reading configurations.....");
+                System.Diagnostics.Debug.WriteLine("Reading configurations.....");
                 String serverName="localhost:1521",
                     username= "psbd_proiect",
                     password="parola1234";
@@ -100,12 +88,11 @@ namespace IaSiViziteaza.DAL.ORC
                     "; Data Source=" + serverName +
                     "; Pooling =false;";
 
-                Console.WriteLine("ConstrVariable created ");
-
+                System.Diagnostics.Debug.WriteLine("ConstrVariable created ");
             }
             catch (Exception ConstrError)
             {
-                Console.WriteLine(ConstrError.Message);
+                System.Diagnostics.Debug.WriteLine(ConstrError.Message);
             }
         }
     }

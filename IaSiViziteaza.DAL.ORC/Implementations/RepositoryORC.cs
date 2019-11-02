@@ -1,7 +1,9 @@
 ﻿using IaSiViziteaza.DAL.ORC.Abstraction;
 using Oracle.ManagedDataAccess.Client;
+using Oracle.ManagedDataAccess.Types;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,13 +12,10 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
 {
     public class RepositoryORC : IRepositoryORC
     {
-        //private  DataBaseConnection databaseContext;
 
         public RepositoryORC()
         {
         }
-
-
 
         public void Add<TEntity>(TEntity entity) where TEntity : class
         {
@@ -26,12 +25,7 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
 
         public void AddAttractionType(AttractionType attractionType)
         {
-            //string conString = "User Id=psbd_proiect; Password=parola1234; Data Source=localhost:1521; Pooling =false;";
-            //OracleConnection conn = new OracleConnection(conString);  // C#
-            //conn.Open();
-            //OracleCommand cmd = new OracleCommand("insert_attraction_type", conn);
             OracleCommand cmd = new OracleCommand("insert_attraction_type", DataBaseConnection.getDbInstance().GetDBConnection());
-
 
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
@@ -42,6 +36,37 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
             cmd.ExecuteNonQuery();
 
             DataBaseConnection.getDbInstance().closeDBConnection();
+        }
+
+        public IList<Attraction> GetAttractions()
+        {
+            //OracleCommand cmd = new OracleCommand("get_attraction", DataBaseConnection.getDbInstance().GetDBConnection());
+
+            //cmd.CommandType = System.Data.CommandType.StoredProcedure;
+            //cmd.Parameters.Add(new OracleParameter("l_rc", OracleDbType.RefCursor, ParameterDirection.Output));
+            //cmd.Parameters["l_rc"].Direction = System.Data.ParameterDirection.ReturnValue;
+
+            //OracleDataAdapter oracleDataAdapter = new OracleDataAdapter(cmd);
+
+            //cmd.ExecuteNonQuery();
+
+            //OracleRefCursor t = (OracleRefCursor)cmd.Parameters[0].Value;
+
+            //OracleDataReader rdr = t.GetDataReader();
+            //var dataTable = rdr.GetSchemaTable();
+            //var list = new List<AttractionType>();
+            //while (rdr.Read())
+            //{
+            //    System.Diagnostics.Debug.WriteLine(rdr.GetInt32(0) + rdr.GetString(1) + rdr.GetString(2) + rdr.GetString(3));
+            //    list.Add(new AttractionType()
+            //    {
+            //        Title = rdr.GetString(1),
+            //        Description = rdr.GetString(2),
+            //        ImagePath = rdr.GetString(3)
+            //    });
+            //}
+            //return list;
+            throw new NotImplementedException();
         }
 
         public bool CheckUserPriority(User user, uint priority)
@@ -69,10 +94,7 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
             throw new NotImplementedException();
         }
 
-        public IList<Attraction> GetAttractions()
-        {
-            throw new NotImplementedException();
-        }
+        
 
         public IList<Attraction> GetAttractionsByType(string attractionTitle)
         {

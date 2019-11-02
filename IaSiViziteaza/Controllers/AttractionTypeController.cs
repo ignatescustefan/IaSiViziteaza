@@ -51,7 +51,7 @@ namespace IaSiViziteaza.Controllers
             //    Description= attractionTypeDTO.Description,
             //    ImagePath=@attractionTypeDTO.Image
             //});
-            _business.AddAttractionType(new IaSiViziteaza.DAL.ORC.AttractionType()
+            _business.AddAttractionType(new DAL.ORC.AttractionType()
             {
                 Title = attractionTypeDTO.Title,
                 Description= attractionTypeDTO.Description,
