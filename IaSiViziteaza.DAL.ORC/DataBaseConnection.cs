@@ -77,7 +77,7 @@ namespace IaSiViziteaza.DAL.ORC
             {
                 System.Diagnostics.Debug.WriteLine("Reading configurations.....");
                 String serverName="localhost:1521",
-                    username= "psbd_proiect",
+                    username= "proiect",
                     password="parola1234";
 
                 //give values to these variables

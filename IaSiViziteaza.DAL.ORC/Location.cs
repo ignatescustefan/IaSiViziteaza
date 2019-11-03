@@ -11,7 +11,7 @@ namespace IaSiViziteaza.DAL.ORC
         public string Address { get; set; }
         public uint PostalCode { get; set; }
 
-        public Guid LocationOfAttractionId { get; set; }
+        public int LocationOfAttractionId { get; set; }
         public Attraction Attraction { get; set; }
     }
 }

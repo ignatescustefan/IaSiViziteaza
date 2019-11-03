@@ -16,8 +16,17 @@ namespace IaSiViziteaza.DAL.ORC.Abstraction
 
         void AddAttractionType(AttractionType attractionType);
 
-        void Add<TEntity>(TEntity entity)
-            where TEntity : class;
+        int AddLocation(Location location);
+
+        void AddAttraction(Attraction attraction);
+
+        void AddUser(User user);
+
+        void AddAccesRight(AccessRight accessRight);
+
+        void AddComment(Comment comment);
+
+        IList<AttractionType> GetAttractionTypes();
 
         TEntity GetUserByEmailAndPassword<TEntity>(string email, string password)
             where TEntity : User;

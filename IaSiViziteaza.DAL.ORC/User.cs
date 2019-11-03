@@ -11,6 +11,7 @@ namespace IaSiViziteaza.DAL.ORC
         public string LastName { get; set; }
         public string PhoneNumber { get; set; }
         public string Password { get; set; }
+
         public ICollection<UserAccessRight> UserAccessRights { get; set; }
         public ICollection<Attraction> Attractions { get; set; }
         public ICollection<Comment> Comments { get; set; }
