@@ -31,8 +31,23 @@ namespace IaSiViziteaza.BLL.Implementations
 
         public void AddAttractionType(DAL.ORC.AttractionType attractionType, bool val)
         {
-            _repositoryORC.AddAttractionType(attractionType);
+            //_repositoryORC.AddAttractionType(attractionType);
+            //var x = _repositoryORC.AddLocation(new DAL.ORC.Location() { });
+          /*  _repositoryORC.AddAttraction(new DAL.ORC.Attraction()
+            {
+                Name = "ceva",
+                Description = "o descriere",
+                OpenTime = new TimeSpan(8, 30, 0),
+                CloseTime = new TimeSpan(20, 0, 0),
+                ImagePath = "/img/ceva",
+                AttractionType = new DAL.ORC.AttractionType() { Id = 2 },
+                Location = new DAL.ORC.Location() { Address = "undeva frumos", PostalCode = 1020312 },
+                User = new DAL.ORC.User() { Id = 2 }
+            });
+            */
 
+            _repositoryORC.GetAttractions();
+            _repositoryORC.GetAttractionsByType("Muzeu");
         }
 
         public bool CheckUserPriority(string email)
