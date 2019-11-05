@@ -52,6 +52,7 @@
 <createdTime>2019-10-17 08:17:12 UTC</createdTime>
 <generatorID>BD0A87DE-69A9-AF72-2B60-0CFE5C288C26</generatorID>
 <ownerDesignName>dataBaseDesign</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
@@ -75,6 +76,16 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="9D268128-4099-2F1D-EC05-83768422BFDA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="22F134CF-3D39-CFA6-5DC8-A481EC795013" name="LOCATION_ATR_UN">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-11-02 12:46:40 UTC</createdTime>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="15131C9C-02DD-129E-05D2-0C076A77B50C"/>
 </indexColumnUsage>
 </ind_PK_UK>
 <ind_PK_UK id="41E7882F-FD0D-A870-25BF-70C3FCD78476" name="LOCATION_ATTRACTION_FK">

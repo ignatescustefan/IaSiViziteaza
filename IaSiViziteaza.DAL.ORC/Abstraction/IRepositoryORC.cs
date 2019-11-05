@@ -11,7 +11,7 @@ namespace IaSiViziteaza.DAL.ORC.Abstraction
         IList<TEntity> Get<TEntity>()
             where TEntity : BaseEntity;
 
-        TEntity GetEntityById<TEntity>(Guid id)
+        TEntity GetEntityById<TEntity>(int id)
             where TEntity : BaseEntity;
 
         void AddAttractionType(AttractionType attractionType);
@@ -39,14 +39,14 @@ namespace IaSiViziteaza.DAL.ORC.Abstraction
         IList<Attraction> GetAttractionsByType(string attractionTitle);
 
         bool CheckUserPriority(User user, uint priority);
-        IList<Comment> GetCommentsByAttractionId(Guid attractionId);
+        IList<Comment> GetCommentsByAttractionId(int attractionId);
         IList<Comment> GetCommentsByAttraction(Attraction attraction);
         IList<Attraction> GetAttractions();
 
-        void UpdateCommentById(Guid id, bool status);
-        void UpdateRatingAttractionById(Guid id, bool status);
+        void UpdateCommentById(int id, bool status);
+        void UpdateRatingAttractionById(int id, bool status);
 
-        bool Delete<TEntity>(Guid id)
+        bool Delete<TEntity>(int id)
             where TEntity : BaseEntity;
         void UpdateUserInformation(User user, string currentEmail);
     }

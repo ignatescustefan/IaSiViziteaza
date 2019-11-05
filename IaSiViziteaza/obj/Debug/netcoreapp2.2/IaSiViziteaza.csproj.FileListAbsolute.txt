@@ -24,8 +24,12 @@ C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza\bin\Debug\netcoreapp2.2\IaSiV
 C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza\bin\Debug\netcoreapp2.2\IaSiViziteaza.pdb
 C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza\bin\Debug\netcoreapp2.2\IaSiViziteaza.BLL.dll
 C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza\bin\Debug\netcoreapp2.2\IaSiViziteaza.DAL.dll
+C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza\bin\Debug\netcoreapp2.2\IaSiViziteaza.DAL.ORC.dll
+C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza\bin\Debug\netcoreapp2.2\Oracle.ManagedDataAccess.dll
 C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza\bin\Debug\netcoreapp2.2\IaSiViziteaza.BLL.pdb
 C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza\bin\Debug\netcoreapp2.2\IaSiViziteaza.DAL.pdb
+C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza\bin\Debug\netcoreapp2.2\IaSiViziteaza.DAL.ORC.pdb
+C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza\bin\Debug\netcoreapp2.2\IaSiViziteaza.DAL.ORC.dll.config
 C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza\obj\Debug\netcoreapp2.2\IaSiViziteaza.csprojAssemblyReference.cache
 C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza\obj\Debug\netcoreapp2.2\IaSiViziteaza.csproj.CoreCompileInputs.cache
 C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza\obj\Debug\netcoreapp2.2\IaSiViziteaza.RazorAssemblyInfo.cache
@@ -36,7 +40,3 @@ C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza\obj\Debug\netcoreapp2.2\IaSiV
 C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza\obj\Debug\netcoreapp2.2\IaSiViziteaza.csproj.CopyComplete
 C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza\obj\Debug\netcoreapp2.2\IaSiViziteaza.dll
 C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza\obj\Debug\netcoreapp2.2\IaSiViziteaza.pdb
-C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza\bin\Debug\netcoreapp2.2\IaSiViziteaza.DAL.ORC.dll
-C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza\bin\Debug\netcoreapp2.2\Oracle.ManagedDataAccess.dll
-C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza\bin\Debug\netcoreapp2.2\IaSiViziteaza.DAL.ORC.pdb
-C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza\bin\Debug\netcoreapp2.2\IaSiViziteaza.DAL.ORC.dll.config

@@ -110,6 +110,7 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
 
             cmd.Parameters.Add("v_first_name", OracleDbType.Varchar2).Value = user.FirstName;
             cmd.Parameters.Add("v_last_name", OracleDbType.Varchar2).Value = user.LastName;
+            cmd.Parameters.Add("v_phone_number", OracleDbType.Varchar2).Value = user.PhoneNumber;
             cmd.Parameters.Add("v_email", OracleDbType.Varchar2).Value = user.Email;
             cmd.Parameters.Add("v_password", OracleDbType.Varchar2).Value = user.Password;
 
@@ -159,6 +160,32 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
             cmd.Parameters.Add("v_content", OracleDbType.Varchar2).Value = comment.CommentContent;
             cmd.Parameters.Add("v_user_id", OracleDbType.Int32).Value = comment.User.Id;
             cmd.Parameters.Add("v_attraction_id", OracleDbType.Int32).Value = comment.Attraction.Id;
+
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+
+                System.Diagnostics.Debug.WriteLine(e.ToString());
+            }
+            finally
+            {
+                DataBaseConnection.getDbInstance().closeDBConnection();
+            }
+        }
+
+        public void UpdateUserInformation(User user, string currentEmail)
+        {
+            OracleCommand cmd = new OracleCommand("user_methods.update_user_info", DataBaseConnection.getDbInstance().GetDBConnection());
+
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.Add("v_old_email", OracleDbType.Varchar2).Value = currentEmail;
+            cmd.Parameters.Add("v_new_phone_number", OracleDbType.Varchar2).Value = user.PhoneNumber;
+            cmd.Parameters.Add("v_new_email", OracleDbType.Varchar2).Value = user.Email;
+            cmd.Parameters.Add("v_new_password", OracleDbType.Varchar2).Value = user.Password;
 
             try
             {
@@ -323,10 +350,85 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
 
         public bool CheckUserPriority(User user, uint priority)
         {
-            throw new NotImplementedException();
+            OracleCommand cmd = new OracleCommand("user_methods.check_user_priority", DataBaseConnection.getDbInstance().GetDBConnection());
+
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.Add(new OracleParameter("v_status", OracleDbType.Decimal));
+            cmd.Parameters["v_status"].Direction = ParameterDirection.ReturnValue;
+
+            cmd.Parameters.Add("v_email", OracleDbType.Varchar2).Value = user.Email;
+            cmd.Parameters.Add("v_priority", OracleDbType.Int32).Value =priority;
+
+            try
+            {
+                cmd.ExecuteNonQuery();
+                var result = int.Parse(cmd.Parameters["v_status"].Value.ToString());
+
+                return result == 1;
+            }
+            catch (Exception e)
+            {
+
+                System.Diagnostics.Debug.WriteLine(e.ToString());
+            }
+            finally
+            {
+                DataBaseConnection.getDbInstance().closeDBConnection();
+            }
+            return true;
         }
 
-        public bool Delete<TEntity>(Guid id) where TEntity : BaseEntity
+        public void UpdateCommentById(int id, bool status)
+        {
+            OracleCommand cmd = new OracleCommand("update_comment_rating", DataBaseConnection.getDbInstance().GetDBConnection());
+
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.Add("v_comment_id", OracleDbType.Int32).Value = id;
+            cmd.Parameters.Add("v_increase", OracleDbType.Int32).Value = status;
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+
+                System.Diagnostics.Debug.WriteLine(e.ToString());
+            }
+            finally
+            {
+                DataBaseConnection.getDbInstance().closeDBConnection();
+            }
+        }
+
+        public void UpdateRatingAttractionById(int id, bool status)
+        {
+            OracleCommand cmd = new OracleCommand("update_attraction_rating", DataBaseConnection.getDbInstance().GetDBConnection());
+
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.Add("v_attraction_id", OracleDbType.Int32).Value = id;
+            cmd.Parameters.Add("v_increase", OracleDbType.Int32).Value = status;
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+
+                System.Diagnostics.Debug.WriteLine(e.ToString());
+            }
+            finally
+            {
+                DataBaseConnection.getDbInstance().closeDBConnection();
+            }
+        }
+
+
+
+
+        public bool Delete<TEntity>(int id) where TEntity : BaseEntity
         {
             throw new NotImplementedException();
         }
@@ -356,12 +458,12 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
             throw new NotImplementedException();
         }
 
-        public IList<Comment> GetCommentsByAttractionId(Guid attractionId)
+        public IList<Comment> GetCommentsByAttractionId(int attractionId)
         {
             throw new NotImplementedException();
         }
 
-        public TEntity GetEntityById<TEntity>(Guid id) where TEntity : BaseEntity
+        public TEntity GetEntityById<TEntity>(int id) where TEntity : BaseEntity
         {
             throw new NotImplementedException();
         }
@@ -376,20 +478,6 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
             throw new NotImplementedException();
         }
 
-        public void UpdateCommentById(Guid id, bool status)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void UpdateRatingAttractionById(Guid id, bool status)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void UpdateUserInformation(User user, string currentEmail)
-        {
-            throw new NotImplementedException();
-        }
-
+        
     }
 }

@@ -33,21 +33,23 @@ namespace IaSiViziteaza.BLL.Implementations
         {
             //_repositoryORC.AddAttractionType(attractionType);
             //var x = _repositoryORC.AddLocation(new DAL.ORC.Location() { });
-          /*  _repositoryORC.AddAttraction(new DAL.ORC.Attraction()
-            {
-                Name = "ceva",
-                Description = "o descriere",
-                OpenTime = new TimeSpan(8, 30, 0),
-                CloseTime = new TimeSpan(20, 0, 0),
-                ImagePath = "/img/ceva",
-                AttractionType = new DAL.ORC.AttractionType() { Id = 2 },
-                Location = new DAL.ORC.Location() { Address = "undeva frumos", PostalCode = 1020312 },
-                User = new DAL.ORC.User() { Id = 2 }
-            });
-            */
+            /*  _repositoryORC.AddAttraction(new DAL.ORC.Attraction()
+              {
+                  Name = "ceva",
+                  Description = "o descriere",
+                  OpenTime = new TimeSpan(8, 30, 0),
+                  CloseTime = new TimeSpan(20, 0, 0),
+                  ImagePath = "/img/ceva",
+                  AttractionType = new DAL.ORC.AttractionType() { Id = 2 },
+                  Location = new DAL.ORC.Location() { Address = "undeva frumos", PostalCode = 1020312 },
+                  User = new DAL.ORC.User() { Id = 2 }
+              });
+              */
 
-            _repositoryORC.GetAttractions();
-            _repositoryORC.GetAttractionsByType("Muzeu");
+            //_repositoryORC.GetAttractions();
+            // _repositoryORC.GetAttractionsByType("Muzeu");
+
+           var x= _repositoryORC.CheckUserPriority(new DAL.ORC.User() { Email = "dudu@mail.om" }, 40);
         }
 
         public bool CheckUserPriority(string email)

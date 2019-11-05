@@ -9,7 +9,7 @@
 <referredTableID>065A9563-D223-BAF7-E3A7-841CFBC54AD0</referredTableID>
 <keyObject>F987B782-C3B0-F288-1F7C-6A56431D5813</keyObject>
 <referredKeyID>F987B782-C3B0-F288-1F7C-6A56431D5813</referredKeyID>
-<mandatory>true</mandatory>
+<mandatory>false</mandatory>
 <refColNames>id_attraction</refColNames>
 <transferable>true</transferable>
 <rely>false</rely>

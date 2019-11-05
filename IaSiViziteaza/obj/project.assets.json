@@ -13087,7 +13087,6 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
       "IaSiViziteaza.BLL >= 1.0.0",
-      "IaSiViziteaza.DAL.ORC >= 1.0.0",
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
       "Microsoft.NETCore.App >= 2.2.0",
@@ -13127,9 +13126,6 @@
           "projectReferences": {
             "C:\\Users\\Stefan\\Desktop\\PSBD-Proiect\\IaSiViziteaza.BLL\\IaSiViziteaza.BLL.csproj": {
               "projectPath": "C:\\Users\\Stefan\\Desktop\\PSBD-Proiect\\IaSiViziteaza.BLL\\IaSiViziteaza.BLL.csproj"
-            },
-            "C:\\Users\\Stefan\\Desktop\\PSBD-Proiect\\IaSiViziteaza.DAL.ORC\\IaSiViziteaza.DAL.ORC.csproj": {
-              "projectPath": "C:\\Users\\Stefan\\Desktop\\PSBD-Proiect\\IaSiViziteaza.DAL.ORC\\IaSiViziteaza.DAL.ORC.csproj"
             }
           }
         }

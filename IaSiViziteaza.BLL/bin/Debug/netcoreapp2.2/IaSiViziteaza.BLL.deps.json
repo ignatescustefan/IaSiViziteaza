@@ -512,17 +512,17 @@
       },
       "IaSiViziteaza.DAL.ORC/1.0.0": {
         "dependencies": {
-          "Oracle.ManagedDataAccess": "4.122.19.1"
+          "Oracle.ManagedDataAccess": "2.0.19.1"
         },
         "runtime": {
           "IaSiViziteaza.DAL.ORC.dll": {}
         }
       },
-      "Oracle.ManagedDataAccess.Reference/4.122.19.1": {
+      "Oracle.ManagedDataAccess.Reference/2.0.19.1": {
         "runtime": {
           "Oracle.ManagedDataAccess.dll": {
-            "assemblyVersion": "4.122.19.1",
-            "fileVersion": "4.122.19.1"
+            "assemblyVersion": "2.0.19.1",
+            "fileVersion": "2.0.19.1"
           }
         }
       }
@@ -915,7 +915,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Oracle.ManagedDataAccess.Reference/4.122.19.1": {
+    "Oracle.ManagedDataAccess.Reference/2.0.19.1": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""

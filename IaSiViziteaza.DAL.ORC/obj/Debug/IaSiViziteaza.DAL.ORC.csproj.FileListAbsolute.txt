@@ -1,12 +1,6 @@
 C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza.DAL.ORC\bin\Debug\IaSiViziteaza.DAL.ORC.dll.config
 C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza.DAL.ORC\bin\Debug\IaSiViziteaza.DAL.ORC.dll
 C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza.DAL.ORC\bin\Debug\IaSiViziteaza.DAL.ORC.pdb
-C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza.DAL.ORC\bin\Debug\Oracle.ManagedDataAccess.dll
-C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza.DAL.ORC\obj\Debug\IaSiViziteaza.DAL.ORC.csprojAssemblyReference.cache
-C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza.DAL.ORC\obj\Debug\IaSiViziteaza.DAL.ORC.csproj.CoreCompileInputs.cache
-C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza.DAL.ORC\obj\Debug\IaSiViziteaza.DAL.ORC.csproj.CopyComplete
-C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza.DAL.ORC\obj\Debug\IaSiViziteaza.DAL.ORC.dll
-C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza.DAL.ORC\obj\Debug\IaSiViziteaza.DAL.ORC.pdb
 C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza.DAL.ORC\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
 C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza.DAL.ORC\bin\Debug\Microsoft.Win32.Primitives.dll
 C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza.DAL.ORC\bin\Debug\netstandard.dll
@@ -103,3 +97,9 @@ C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza.DAL.ORC\bin\Debug\System.Xml.
 C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza.DAL.ORC\bin\Debug\System.Xml.XmlSerializer.dll
 C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza.DAL.ORC\bin\Debug\System.Xml.XPath.dll
 C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza.DAL.ORC\bin\Debug\System.Xml.XPath.XDocument.dll
+C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza.DAL.ORC\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza.DAL.ORC\obj\Debug\IaSiViziteaza.DAL.ORC.csprojAssemblyReference.cache
+C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza.DAL.ORC\obj\Debug\IaSiViziteaza.DAL.ORC.csproj.CoreCompileInputs.cache
+C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza.DAL.ORC\obj\Debug\IaSiViziteaza.DAL.ORC.csproj.CopyComplete
+C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza.DAL.ORC\obj\Debug\IaSiViziteaza.DAL.ORC.dll
+C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza.DAL.ORC\obj\Debug\IaSiViziteaza.DAL.ORC.pdb
