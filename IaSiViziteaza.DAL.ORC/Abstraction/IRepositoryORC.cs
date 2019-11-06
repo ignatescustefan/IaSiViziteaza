@@ -8,9 +8,6 @@ namespace IaSiViziteaza.DAL.ORC.Abstraction
 {
     public interface IRepositoryORC
     {
-        IList<TEntity> Get<TEntity>()
-            where TEntity : BaseEntity;
-
         TEntity GetEntityById<TEntity>(int id)
             where TEntity : BaseEntity;
 
@@ -26,15 +23,16 @@ namespace IaSiViziteaza.DAL.ORC.Abstraction
 
         void AddComment(Comment comment);
 
+        void AddUserToRight(int user_id, int rigth_id);
+
         IList<AttractionType> GetAttractionTypes();
 
-        TEntity GetUserByEmailAndPassword<TEntity>(string email, string password)
-            where TEntity : User;
-
+        User GetUserByEmailAndPassword(string email, string password);
+        
         bool FindUserByEmail(string email);
         User GetUserByEmail(string email);
 
-        bool FindAttractionByTitle(string title);
+        bool FindAttractionTypeByTitle(string title);
         AttractionType GetAttractionTypeByTitle(string title);
         IList<Attraction> GetAttractionsByType(string attractionTitle);
 

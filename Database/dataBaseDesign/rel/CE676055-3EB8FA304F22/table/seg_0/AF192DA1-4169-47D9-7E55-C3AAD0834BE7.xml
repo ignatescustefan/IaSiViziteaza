@@ -78,6 +78,20 @@
 <colAssociation fkAssociation="DE505665-3139-5549-1C20-4C215766394D" referredColumn="1E8E5930-4F6F-F1BF-E94A-AA0DA4FC8E84"/>
 </associations>
 </Column>
+<Column name="rating" id="BE222D5D-2B33-F9DD-40EE-9AEE481E7BD1">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-11-06 09:28:12 UTC</createdTime>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<defaultOntNull>true</defaultOntNull>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="2114C371-5E78-4E7E-20D6-9081DD0CA1A4" name="COMMENT_PK">

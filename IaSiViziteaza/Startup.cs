@@ -4,8 +4,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using IaSiViziteaza.BLL.Abstractions;
 using IaSiViziteaza.BLL.Implementations;
-using IaSiViziteaza.DAL.Abstraction;
-using IaSiViziteaza.DAL.Implementations;
 using IaSiViziteaza.DAL.ORC.Abstraction;
 using IaSiViziteaza.DAL.ORC.Implementations;
 using Microsoft.AspNetCore.Builder;
@@ -41,7 +39,6 @@ namespace IaSiViziteaza
                 c.SwaggerDoc("v1", new Info { Title = "My API", Version = "v1" });
             });
             services.AddScoped<IRepositoryORC, RepositoryORC>();
-            services.AddScoped<IRepository, Repository>();
             services.AddScoped<IUserBusiness, UserBusiness>();
             services.AddScoped<IAttractionTypeBusiness, AttractionTypeBussines>();
             services.AddScoped<ILocationBusiness, LocationBusiness>();

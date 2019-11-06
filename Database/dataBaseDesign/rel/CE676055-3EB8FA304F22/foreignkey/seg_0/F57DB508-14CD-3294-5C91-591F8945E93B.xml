@@ -5,7 +5,7 @@
 <generatorID>DA663B93-0951-5036-CD27-B89A6504DD27</generatorID>
 <ownerDesignName>dataBaseDesign</ownerDesignName>
 <referredTableLongName>ATTRACTION_TYPE</referredTableLongName>
-<deleteRule>NO ACTION</deleteRule>
+<deleteRule>CASCADE</deleteRule>
 <referredTableID>B8474494-207A-A5DA-AE14-706FF2BEF164</referredTableID>
 <keyObject>56115599-5089-CD55-1CD3-E114CB7EC694</keyObject>
 <referredKeyID>56115599-5089-CD55-1CD3-E114CB7EC694</referredKeyID>

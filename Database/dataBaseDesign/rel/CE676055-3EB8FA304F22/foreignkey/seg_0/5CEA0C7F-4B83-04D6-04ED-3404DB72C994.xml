@@ -5,7 +5,7 @@
 <generatorID>97EEE7BD-6AA9-6195-76E8-003CBFB90748</generatorID>
 <ownerDesignName>dataBaseDesign</ownerDesignName>
 <referredTableLongName>USER</referredTableLongName>
-<deleteRule>NO ACTION</deleteRule>
+<deleteRule>CASCADE</deleteRule>
 <referredTableID>70D7603B-314B-8236-5C59-48623834447D</referredTableID>
 <keyObject>0C28A112-D7B1-6A74-10D7-3B9E5051E18F</keyObject>
 <referredKeyID>0C28A112-D7B1-6A74-10D7-3B9E5051E18F</referredKeyID>

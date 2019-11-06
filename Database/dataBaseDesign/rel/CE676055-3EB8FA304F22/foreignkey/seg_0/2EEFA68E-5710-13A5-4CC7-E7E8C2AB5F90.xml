@@ -5,7 +5,7 @@
 <generatorID>559A30AF-0193-43BB-C21C-36E9F010642C</generatorID>
 <ownerDesignName>dataBaseDesign</ownerDesignName>
 <referredTableLongName>ACCES_RIGHT</referredTableLongName>
-<deleteRule>NO ACTION</deleteRule>
+<deleteRule>CASCADE</deleteRule>
 <referredTableID>9E15A0AA-6D8B-A99A-2FB5-2730C9B5B592</referredTableID>
 <keyObject>32108BC4-3569-55F5-57E6-BDFCB1716329</keyObject>
 <referredKeyID>32108BC4-3569-55F5-57E6-BDFCB1716329</referredKeyID>

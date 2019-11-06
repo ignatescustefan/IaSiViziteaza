@@ -5,7 +5,7 @@
 <generatorID>3734C205-C958-8C9D-F5B0-E6EB598CDE66</generatorID>
 <ownerDesignName>dataBaseDesign</ownerDesignName>
 <referredTableLongName>LOCATION</referredTableLongName>
-<deleteRule>NO ACTION</deleteRule>
+<deleteRule>CASCADE</deleteRule>
 <referredTableID>33C45D89-8BBC-3BF5-98B3-5DA9BF1CFC70</referredTableID>
 <keyObject>0F8DD253-8343-5592-67F9-9A2F860ED103</keyObject>
 <referredKeyID>0F8DD253-8343-5592-67F9-9A2F860ED103</referredKeyID>

@@ -1,7 +1,7 @@
 ﻿using IaSiViziteaza.BLL.Abstractions;
 using IaSiViziteaza.BLL.DTO;
-using IaSiViziteaza.DAL;
-using IaSiViziteaza.DAL.Abstraction;
+using IaSiViziteaza.DAL.ORC;
+using IaSiViziteaza.DAL.ORC.Abstraction;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -10,12 +10,12 @@ namespace IaSiViziteaza.BLL.Implementations
 {
     public class UserBusiness : IUserBusiness
     {
-        private readonly IRepository _repository;
-        private readonly Guid NormalUser = Guid.Parse("e831fc0c-3390-4996-a036-21ba727767f2");
-        private readonly Guid AdminUser = Guid.Parse("510cdfb1-6f23-44b6-fbc4-08d706cf10c5");
+        private readonly IRepositoryORC _repository;
+        private readonly int NormalUser =20;
+        private readonly int AdminUser = 30;
      //   private readonly Guid MaxUser = Guid.Parse("15da1bd7-9832-4426-fbc3-08d706cf10c5");
 
-        public UserBusiness(IRepository repository)
+        public UserBusiness(IRepositoryORC repository)
         {
             _repository = repository;
         }
@@ -27,7 +27,7 @@ namespace IaSiViziteaza.BLL.Implementations
                 return false;
             }
 
-            Guid id = new Guid();
+            int id = new int();
 
             UserAccessRight userAccessRight = new UserAccessRight()
             {
@@ -57,7 +57,7 @@ namespace IaSiViziteaza.BLL.Implementations
                 return false;
             }
 
-            Guid id = new Guid();
+            int id = new int();
 
             UserAccessRight userAccessRight = new UserAccessRight()
             {

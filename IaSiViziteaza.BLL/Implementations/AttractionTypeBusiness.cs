@@ -1,8 +1,7 @@
 ﻿using IaSiViziteaza.BLL.Abstractions;
-using IaSiViziteaza.DAL;
-using IaSiViziteaza.DAL.Abstraction;
-
+using IaSiViziteaza.DAL.ORC;
 using IaSiViziteaza.DAL.ORC.Abstraction;
+
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -11,12 +10,10 @@ namespace IaSiViziteaza.BLL.Implementations
 {
     public class AttractionTypeBussines: IAttractionTypeBusiness
     {
-        private readonly IRepository _repository;
-        private readonly IRepositoryORC _repositoryORC;
-        public AttractionTypeBussines(IRepository repository,IRepositoryORC repositoryORC)
+        private readonly IRepositoryORC _repository;
+        public AttractionTypeBussines(IRepositoryORC repositoryORC)
         {
-            _repository = repository;
-            _repositoryORC = repositoryORC;
+            _repository = repositoryORC;
         }
 
         public bool AddAttractionType(AttractionType attractionType)
@@ -49,7 +46,12 @@ namespace IaSiViziteaza.BLL.Implementations
             //_repositoryORC.GetAttractions();
             // _repositoryORC.GetAttractionsByType("Muzeu");
 
-           var x= _repositoryORC.CheckUserPriority(new DAL.ORC.User() { Email = "dudu@mail.om" }, 40);
+            // var x= _repositoryORC.CheckUserPriority(new DAL.ORC.User() { Email = "dudu@mail.om" }, 40);
+
+            //var y = _repositoryORC.GetAttractionTypeByTitle("Muzeu");
+            //var z = _repositoryORC.GetUserByEmail(attractionType.Title);
+            //var comm = _repositoryORC.GetCommentsByAttractionId(1);
+            var user = _repository.GetUserByEmailAndPassword("dudu@mil.om", "1234567");
         }
 
         public bool CheckUserPriority(string email)
@@ -58,7 +60,7 @@ namespace IaSiViziteaza.BLL.Implementations
             return _repository.CheckUserPriority(x, 20);
         }
 
-        public bool DeleteAttractionTypeById(Guid id)
+        public bool DeleteAttractionTypeById(int id)
         {
             return _repository.Delete<AttractionType>(id);
         }

@@ -93,6 +93,20 @@
 <ownDataTypeParameters>50,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="rating" id="E52E592C-B6EA-30B7-3912-DDF0F6DCACAE">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-11-06 09:26:00 UTC</createdTime>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<defaultOntNull>true</defaultOntNull>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 <Column name="LOCATION_id_location" id="1C3DD78C-BF1B-CCCD-D74C-03303A34CD2A">
 <createdBy>Stefan</createdBy>
 <createdTime>2019-10-17 08:17:12 UTC</createdTime>
