@@ -1,4 +1,4 @@
-﻿using IaSiViziteaza.DAL;
+﻿using IaSiViziteaza.DAL.ORC;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -9,6 +9,6 @@ namespace IaSiViziteaza.BLL.Abstractions
     {
         //LocationDTO
         void AddLocation(Location location);
-        Location GetLocationById(Guid id);
+        Location GetLocationById(int id);
     }
 }

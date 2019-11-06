@@ -23,7 +23,7 @@ namespace IaSiViziteaza.Controllers
         }
 
         [HttpGet("{id}", Name = "GetCommentByAttractionId")]
-        public ActionResult Get(Guid id)
+        public ActionResult Get(int id)
         {
             var x = _business.GetCommentsByAttractionId(id);
             return Ok(x);
@@ -51,7 +51,7 @@ namespace IaSiViziteaza.Controllers
         // DELETE: api/ApiWithActions/5
         [Route("delete")]
         [HttpDelete]
-        public ActionResult<bool> Delete(Guid id)
+        public ActionResult<bool> Delete(int id)
         {
             return Ok(_business.DeleteCommentById(id));
         }

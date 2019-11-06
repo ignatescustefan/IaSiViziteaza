@@ -6,7 +6,7 @@ namespace IaSiViziteaza.BLL.DTO
 {
     public class DeleteDTO
     {
-        public Guid Id { get; set; }
+        public int Id { get; set; }
         public string UserEmail { get; set; }
     }
 }

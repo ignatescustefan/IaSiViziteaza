@@ -6,7 +6,7 @@ namespace IaSiViziteaza.BLL.DTO
 {
     public class UpdateRatingDTO
     {
-        public Guid Id { get; set; }
+        public int Id { get; set; }
         public bool Status { get; set; }
     }
 }

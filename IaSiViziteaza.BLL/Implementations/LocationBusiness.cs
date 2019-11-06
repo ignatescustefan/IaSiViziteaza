@@ -1,6 +1,6 @@
 ﻿using IaSiViziteaza.BLL.Abstractions;
-using IaSiViziteaza.DAL;
-using IaSiViziteaza.DAL.Abstraction;
+using IaSiViziteaza.DAL.ORC;
+using IaSiViziteaza.DAL.ORC.Abstraction;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -9,19 +9,19 @@ namespace IaSiViziteaza.BLL.Implementations
 {
     public class LocationBusiness : ILocationBusiness
     {
-        private readonly IRepository _repository;
+        private readonly IRepositoryORC _repository;
 
-        public LocationBusiness(IRepository repository)
+        public LocationBusiness(IRepositoryORC repository)
         {
             _repository = repository;
         }
         
         public void AddLocation(Location location)
         {
-            _repository.Add<Location>(location);
+            _repository.AddLocation(location);
         }
 
-        public Location GetLocationById(Guid id)
+        public Location GetLocationById(int id)
         {
             return _repository.GetEntityById<Location>(id);
         }

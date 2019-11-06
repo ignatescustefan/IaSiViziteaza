@@ -28,9 +28,9 @@ namespace IaSiViziteaza.Controllers
         }
         // GET: api/Attractions
         [HttpGet("{attractionTitle}", Name = "GetAttractionByTitle")]
-        public ActionResult Get(string attractionTitle,Guid id)
+        public ActionResult Get(string attractionTitle,int id)
         {
-            if (id != Guid.Parse("00000000-0000-0000-0000-000000000000"))
+            if (id != 0)
             {
                 return Ok(_business.GetAttractionById(id));
             }
@@ -62,7 +62,7 @@ namespace IaSiViziteaza.Controllers
         // DELETE: api/ApiWithActions/5
         [Route("delete")]
         [HttpDelete]
-        public ActionResult<bool> Delete(Guid id)
+        public ActionResult<bool> Delete(int id)
         {
             return Ok(_business.DeleteAttractionById(id));
         }

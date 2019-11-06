@@ -10,9 +10,9 @@ namespace IaSiViziteaza.BLL.Abstractions
     {
         IList<AttractionReturnDTO> GetAttraction();
         IList<AttractionReturnDTO> GetAttractionsByType(string attractionTitle);
-        AttractionReturnDTO GetAttractionById(Guid id);
+        AttractionReturnDTO GetAttractionById(int id);
         bool AddAttraction(AttractionDTO attraction);
-        void UpdateRatingAttractionById(Guid id, bool status);
-        bool DeleteAttractionById(Guid id);
+        void UpdateRatingAttractionById(int id, bool status);
+        bool DeleteAttractionById(int id);
     }
 }

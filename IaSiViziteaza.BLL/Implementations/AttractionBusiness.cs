@@ -1,7 +1,7 @@
 ﻿using IaSiViziteaza.BLL.Abstractions;
 using IaSiViziteaza.BLL.DTO;
-using IaSiViziteaza.DAL;
-using IaSiViziteaza.DAL.Abstraction;
+using IaSiViziteaza.DAL.ORC;
+using IaSiViziteaza.DAL.ORC.Abstraction;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,9 +11,9 @@ namespace IaSiViziteaza.BLL.Implementations
 {
     public class AttractionBusiness: IAttractionBusiness
     {
-        private readonly IRepository _repository;
+        private readonly IRepositoryORC _repository;
 
-        public AttractionBusiness(IRepository repository)
+        public AttractionBusiness(IRepositoryORC repository)
         {
             _repository = repository;
         }
@@ -24,19 +24,15 @@ namespace IaSiViziteaza.BLL.Implementations
             if (_repository.CheckUserPriority(user, 20) == false)
                 return false;
             AttractionType attractionType = _repository.GetAttractionTypeByTitle(attractionDTO.Title);
-            Guid attractionId = new Guid();
             Location location = new Location()
             {
                 Address = attractionDTO.Address,
-                PostalCode = attractionDTO.PostalCode,
-                Id = new Guid(),
-                LocationOfAttractionId = attractionId
+                PostalCode = attractionDTO.PostalCode
             };
-            _repository.Add<Attraction>(new Attraction()
+            _repository.AddAttraction(new Attraction()
             {
                 AttractionType = attractionType,
                 User = user,
-                Id = attractionId,
                 Name = attractionDTO.Name,
                 Description = attractionDTO.Description,
                 Rating = 0,
@@ -46,13 +42,12 @@ namespace IaSiViziteaza.BLL.Implementations
                 CreateAtractionTime = DateTime.Now,
                 Location = location,
                 ImagePath = @attractionDTO.Image,
-                Comments = new List<Comment>()
             });
             return true;
 
         }
 
-        public bool DeleteAttractionById(Guid id)
+        public bool DeleteAttractionById(int id)
         {
            return _repository.Delete<Attraction>(id);
         }
@@ -84,7 +79,7 @@ namespace IaSiViziteaza.BLL.Implementations
             return x;
         }
 
-        public AttractionReturnDTO GetAttractionById(Guid id)
+        public AttractionReturnDTO GetAttractionById(int id)
         {
             return _repository.GetAttractions()
                 .Where(att => att.Id == id)
@@ -134,7 +129,7 @@ namespace IaSiViziteaza.BLL.Implementations
             return x;
         }
 
-        public void UpdateRatingAttractionById(Guid id, bool status)
+        public void UpdateRatingAttractionById(int id, bool status)
         {
             _repository.UpdateRatingAttractionById(id, status);
         }

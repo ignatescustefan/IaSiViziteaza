@@ -20,9 +20,10 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
         public void AddAttractionType(AttractionType attractionType)
         {
             OracleCommand cmd = new OracleCommand("insert_procedure.insert_attraction_type",
-                DataBaseConnection.getDbInstance().GetDBConnection());
-
-            cmd.CommandType = CommandType.StoredProcedure;
+                DataBaseConnection.getDbInstance().GetDBConnection())
+            {
+                CommandType = CommandType.StoredProcedure
+            };
 
             cmd.Parameters.Add("v_TITLE", OracleDbType.Varchar2).Value = attractionType.Title;
             cmd.Parameters.Add("v_DESCRIPTION", OracleDbType.Varchar2).Value = attractionType.Description;
@@ -45,9 +46,10 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
         public int AddLocation(Location location)
         {
             OracleCommand cmd = new OracleCommand("insert_procedure.insert_location",
-                DataBaseConnection.getDbInstance().GetDBConnection());
-
-            cmd.CommandType = CommandType.StoredProcedure;
+                DataBaseConnection.getDbInstance().GetDBConnection())
+            {
+                CommandType = CommandType.StoredProcedure
+            };
             cmd.Parameters.Add("v_address", OracleDbType.Varchar2, ParameterDirection.Input).Value = location.Address;
             cmd.Parameters.Add("v_postal_code", OracleDbType.Varchar2, ParameterDirection.Input).Value = location.PostalCode.ToString();
             cmd.Parameters.Add("v_attraction_id", OracleDbType.Int32, ParameterDirection.Input).Value = null;
@@ -74,9 +76,10 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
         public void AddAttraction(Attraction attraction)
         {
             OracleCommand cmd = new OracleCommand("insert_procedure.insert_attraction",
-                DataBaseConnection.getDbInstance().GetDBConnection());
-
-            cmd.CommandType = CommandType.StoredProcedure;
+                DataBaseConnection.getDbInstance().GetDBConnection())
+            {
+                CommandType = CommandType.StoredProcedure
+            };
 
             cmd.Parameters.Add("v_name", OracleDbType.Varchar2).Value = attraction.Name;
             cmd.Parameters.Add("v_desc", OracleDbType.Varchar2).Value = attraction.Description;
@@ -104,9 +107,10 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
 
         public void AddUser(User user)
         {
-            OracleCommand cmd = new OracleCommand("insert_procedure.insert_user", DataBaseConnection.getDbInstance().GetDBConnection());
-
-            cmd.CommandType = CommandType.StoredProcedure;
+            OracleCommand cmd = new OracleCommand("insert_procedure.insert_user", DataBaseConnection.getDbInstance().GetDBConnection())
+            {
+                CommandType = CommandType.StoredProcedure
+            };
 
             cmd.Parameters.Add("v_first_name", OracleDbType.Varchar2).Value = user.FirstName;
             cmd.Parameters.Add("v_last_name", OracleDbType.Varchar2).Value = user.LastName;
@@ -132,9 +136,10 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
         public void AddAccesRight(AccessRight accessRight)
         {
             OracleCommand cmd = new OracleCommand("insert_procedure.insert_acces_right",
-                DataBaseConnection.getDbInstance().GetDBConnection());
-
-            cmd.CommandType = CommandType.StoredProcedure;
+                DataBaseConnection.getDbInstance().GetDBConnection())
+            {
+                CommandType = CommandType.StoredProcedure
+            };
             cmd.Parameters.Add("v_value", OracleDbType.Int32).Value = accessRight.Priority;
             try
             {
@@ -154,9 +159,10 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
         public void AddUserToRight(int user_id, int rigth_id)
         {
             OracleCommand cmd = new OracleCommand("insert_procedure.insert_user_to_right",
-                DataBaseConnection.getDbInstance().GetDBConnection());
-
-            cmd.CommandType = CommandType.StoredProcedure;
+                DataBaseConnection.getDbInstance().GetDBConnection())
+            {
+                CommandType = CommandType.StoredProcedure
+            };
             cmd.Parameters.Add("v_user_id_user", OracleDbType.Int32).Value = user_id;
             cmd.Parameters.Add("v_acces_right_id_acces_right", OracleDbType.Int32).Value = rigth_id;
             try
@@ -176,9 +182,10 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
 
         public void AddComment(Comment comment)
         {
-            OracleCommand cmd = new OracleCommand("insert_procedure.insert_comment", DataBaseConnection.getDbInstance().GetDBConnection());
-
-            cmd.CommandType = CommandType.StoredProcedure;
+            OracleCommand cmd = new OracleCommand("insert_procedure.insert_comment", DataBaseConnection.getDbInstance().GetDBConnection())
+            {
+                CommandType = CommandType.StoredProcedure
+            };
 
             cmd.Parameters.Add("v_content", OracleDbType.Varchar2).Value = comment.CommentContent;
             cmd.Parameters.Add("v_user_id", OracleDbType.Int32).Value = comment.User.Id;
@@ -201,9 +208,10 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
 
         public void UpdateUserInformation(User user, string currentEmail)
         {
-            OracleCommand cmd = new OracleCommand("user_methods.update_user_info", DataBaseConnection.getDbInstance().GetDBConnection());
-
-            cmd.CommandType = CommandType.StoredProcedure;
+            OracleCommand cmd = new OracleCommand("user_methods.update_user_info", DataBaseConnection.getDbInstance().GetDBConnection())
+            {
+                CommandType = CommandType.StoredProcedure
+            };
 
             cmd.Parameters.Add("v_old_email", OracleDbType.Varchar2).Value = currentEmail;
             cmd.Parameters.Add("v_new_phone_number", OracleDbType.Varchar2).Value = user.PhoneNumber;
@@ -227,9 +235,10 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
 
         public IList<AttractionType> GetAttractionTypes()
         {
-            OracleCommand cmd = new OracleCommand("get_function.get_attractiontype", DataBaseConnection.getDbInstance().GetDBConnection());
-
-            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+            OracleCommand cmd = new OracleCommand("get_function.get_attractiontype", DataBaseConnection.getDbInstance().GetDBConnection())
+            {
+                CommandType = System.Data.CommandType.StoredProcedure
+            };
             cmd.Parameters.Add(new OracleParameter("l_rc", OracleDbType.RefCursor, ParameterDirection.Output));
             cmd.Parameters["l_rc"].Direction = ParameterDirection.ReturnValue;
 
@@ -270,9 +279,10 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
 
         public IList<Attraction> GetAttractions()
         {
-            OracleCommand cmd = new OracleCommand("get_function.get_attraction", DataBaseConnection.getDbInstance().GetDBConnection());
-
-            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+            OracleCommand cmd = new OracleCommand("get_function.get_attraction", DataBaseConnection.getDbInstance().GetDBConnection())
+            {
+                CommandType = System.Data.CommandType.StoredProcedure
+            };
             cmd.Parameters.Add(new OracleParameter("l_rc", OracleDbType.RefCursor, ParameterDirection.Output));
             cmd.Parameters["l_rc"].Direction = ParameterDirection.ReturnValue;
 
@@ -320,9 +330,10 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
 
         public IList<Attraction> GetAttractionsByType(string attractionTitle)
         {
-            OracleCommand cmd = new OracleCommand("get_function.get_attraction_by_attraction_type", DataBaseConnection.getDbInstance().GetDBConnection());
-
-            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+            OracleCommand cmd = new OracleCommand("get_function.get_attraction_by_attraction_type", DataBaseConnection.getDbInstance().GetDBConnection())
+            {
+                CommandType = System.Data.CommandType.StoredProcedure
+            };
 
             cmd.Parameters.Add(new OracleParameter("l_rc", OracleDbType.RefCursor, ParameterDirection.Output));
             cmd.Parameters["l_rc"].Direction = ParameterDirection.ReturnValue;
@@ -372,9 +383,10 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
 
         public bool CheckUserPriority(User user, uint priority)
         {
-            OracleCommand cmd = new OracleCommand("user_methods.check_user_priority", DataBaseConnection.getDbInstance().GetDBConnection());
-
-            cmd.CommandType = CommandType.StoredProcedure;
+            OracleCommand cmd = new OracleCommand("user_methods.check_user_priority", DataBaseConnection.getDbInstance().GetDBConnection())
+            {
+                CommandType = CommandType.StoredProcedure
+            };
 
             cmd.Parameters.Add(new OracleParameter("v_status", OracleDbType.Decimal));
             cmd.Parameters["v_status"].Direction = ParameterDirection.ReturnValue;
@@ -403,9 +415,10 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
 
         public void UpdateCommentById(int id, bool status)
         {
-            OracleCommand cmd = new OracleCommand("update_comment_rating", DataBaseConnection.getDbInstance().GetDBConnection());
-
-            cmd.CommandType = CommandType.StoredProcedure;
+            OracleCommand cmd = new OracleCommand("update_comment_rating", DataBaseConnection.getDbInstance().GetDBConnection())
+            {
+                CommandType = CommandType.StoredProcedure
+            };
 
             cmd.Parameters.Add("v_comment_id", OracleDbType.Int32).Value = id;
             cmd.Parameters.Add("v_increase", OracleDbType.Int32).Value = status;
@@ -426,9 +439,10 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
 
         public void UpdateRatingAttractionById(int id, bool status)
         {
-            OracleCommand cmd = new OracleCommand("update_attraction_rating", DataBaseConnection.getDbInstance().GetDBConnection());
-
-            cmd.CommandType = CommandType.StoredProcedure;
+            OracleCommand cmd = new OracleCommand("update_attraction_rating", DataBaseConnection.getDbInstance().GetDBConnection())
+            {
+                CommandType = CommandType.StoredProcedure
+            };
 
             cmd.Parameters.Add("v_attraction_id", OracleDbType.Int32).Value = id;
             cmd.Parameters.Add("v_increase", OracleDbType.Int32).Value = status;
@@ -449,9 +463,10 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
 
         public AttractionType GetAttractionTypeByTitle(string title)
         {
-            OracleCommand cmd = new OracleCommand("get_function.get_attractiontypedata", DataBaseConnection.getDbInstance().GetDBConnection());
-
-            cmd.CommandType = CommandType.StoredProcedure;
+            OracleCommand cmd = new OracleCommand("get_function.get_attractiontypedata", DataBaseConnection.getDbInstance().GetDBConnection())
+            {
+                CommandType = CommandType.StoredProcedure
+            };
 
             OracleParameter v_attraction_type = new OracleParameter("v_attraction_type",
                 OracleDbType.RefCursor, ParameterDirection.ReturnValue);
@@ -499,9 +514,10 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
         public User GetUserByEmail(string email)
         {
 
-            OracleCommand cmd = new OracleCommand("user_methods.get_user_by_email", DataBaseConnection.getDbInstance().GetDBConnection());
-
-            cmd.CommandType = CommandType.StoredProcedure;
+            OracleCommand cmd = new OracleCommand("user_methods.get_user_by_email", DataBaseConnection.getDbInstance().GetDBConnection())
+            {
+                CommandType = CommandType.StoredProcedure
+            };
 
             OracleParameter v_attraction_type = new OracleParameter("v_user",
                 OracleDbType.RefCursor, ParameterDirection.ReturnValue);
@@ -549,9 +565,10 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
 
         public IList<Comment> GetCommentsByAttraction(Attraction attraction)
         {
-            OracleCommand cmd = new OracleCommand("get_function.get_comments_by_attraction_id", DataBaseConnection.getDbInstance().GetDBConnection());
-
-            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+            OracleCommand cmd = new OracleCommand("get_function.get_comments_by_attraction_id", DataBaseConnection.getDbInstance().GetDBConnection())
+            {
+                CommandType = System.Data.CommandType.StoredProcedure
+            };
 
             cmd.Parameters.Add(new OracleParameter("v_comments", OracleDbType.RefCursor, ParameterDirection.Output));
             cmd.Parameters["v_comments"].Direction = ParameterDirection.ReturnValue;
@@ -608,9 +625,10 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
 
         public User GetUserByEmailAndPassword(string email, string password)
         {
-            OracleCommand cmd = new OracleCommand("user_methods.user_login", DataBaseConnection.getDbInstance().GetDBConnection());
-
-            cmd.CommandType = CommandType.StoredProcedure;
+            OracleCommand cmd = new OracleCommand("user_methods.user_login", DataBaseConnection.getDbInstance().GetDBConnection())
+            {
+                CommandType = CommandType.StoredProcedure
+            };
 
             OracleParameter v_attraction_type = new OracleParameter("v_user",
                 OracleDbType.RefCursor, ParameterDirection.ReturnValue);
@@ -663,6 +681,9 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
             throw new NotImplementedException();
         }
 
-        
+        public IList<User> GetUsers()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

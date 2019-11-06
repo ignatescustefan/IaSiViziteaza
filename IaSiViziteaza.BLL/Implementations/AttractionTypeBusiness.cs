@@ -18,16 +18,10 @@ namespace IaSiViziteaza.BLL.Implementations
 
         public bool AddAttractionType(AttractionType attractionType)
         {
-            if (_repository.FindAttractionByTitle(attractionType.Title) == true)
+            if (_repository.FindAttractionTypeByTitle(attractionType.Title) == true)
                 return false;
-            _repository.Add<AttractionType>(attractionType);
+            _repository.AddAttractionType(attractionType);
             return true;
-        }
-
-    
-
-        public void AddAttractionType(DAL.ORC.AttractionType attractionType, bool val)
-        {
             //_repositoryORC.AddAttractionType(attractionType);
             //var x = _repositoryORC.AddLocation(new DAL.ORC.Location() { });
             /*  _repositoryORC.AddAttraction(new DAL.ORC.Attraction()
@@ -51,8 +45,9 @@ namespace IaSiViziteaza.BLL.Implementations
             //var y = _repositoryORC.GetAttractionTypeByTitle("Muzeu");
             //var z = _repositoryORC.GetUserByEmail(attractionType.Title);
             //var comm = _repositoryORC.GetCommentsByAttractionId(1);
-            var user = _repository.GetUserByEmailAndPassword("dudu@mil.om", "1234567");
+            //var user = _repository.GetUserByEmailAndPassword("dudu@mil.om", "1234567");
         }
+
 
         public bool CheckUserPriority(string email)
         {
@@ -67,7 +62,7 @@ namespace IaSiViziteaza.BLL.Implementations
 
         public IList<AttractionType> GetAttractionTypes()
         {
-            var x=_repository.Get<AttractionType>();
+            var x=_repository.GetAttractionTypes();
             foreach(var attr in x)
             {
                 if (null == attr.ImagePath)

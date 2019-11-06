@@ -6,7 +6,7 @@ namespace IaSiViziteaza.BLL.DTO
 {
     public class CommentReturnDTO
     {
-        public Guid CommentId { get; set; }
+        public int CommentId { get; set; }
         public string FirstNameUser { get; set; }
         public string LastNameUser { get; set; }
         public string CommentContent { get; set; }

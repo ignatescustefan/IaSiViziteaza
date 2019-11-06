@@ -20,7 +20,7 @@ namespace IaSiViziteaza.Controllers
         }
         // GET: api/Location/5
         [HttpGet("{id}", Name = "GetLocationById")]
-        public ActionResult Get(Guid id)
+        public ActionResult Get(int id)
         {
             return Ok(_business.GetLocationById(id));
         }

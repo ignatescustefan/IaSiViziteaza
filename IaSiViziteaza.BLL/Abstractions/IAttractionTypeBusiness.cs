@@ -9,9 +9,8 @@ namespace IaSiViziteaza.BLL.Abstractions
     {
         IList<AttractionType> GetAttractionTypes();
         bool AddAttractionType(AttractionType attractionType);
-        void AddAttractionType(IaSiViziteaza.DAL.ORC.AttractionType attractionType,bool val);
 
         bool CheckUserPriority(string email);
-        bool DeleteAttractionTypeById(Guid id);
+        bool DeleteAttractionTypeById(int id);
     }
 }

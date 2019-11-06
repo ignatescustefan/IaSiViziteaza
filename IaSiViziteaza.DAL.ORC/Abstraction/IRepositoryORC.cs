@@ -25,6 +25,8 @@ namespace IaSiViziteaza.DAL.ORC.Abstraction
 
         void AddUserToRight(int user_id, int rigth_id);
 
+        IList<User> GetUsers();
+
         IList<AttractionType> GetAttractionTypes();
 
         User GetUserByEmailAndPassword(string email, string password);

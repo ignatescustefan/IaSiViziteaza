@@ -11,9 +11,8 @@ namespace IaSiViziteaza.BLL.Abstractions
     public interface ICommentBusiness
     {
         bool AddComment(CommentDTO commentDTO);
-        IList<CommentReturnDTO> GetCommentsByAttractionId(Guid attractionId);
-        IList<Comment> GetComment();
-        void UpdateCommentById(Guid id, bool status);
-        bool DeleteCommentById(Guid id);
+        IList<CommentReturnDTO> GetCommentsByAttractionId(int attractionId);
+        void UpdateCommentById(int id, bool status);
+        bool DeleteCommentById(int id);
     }
 }

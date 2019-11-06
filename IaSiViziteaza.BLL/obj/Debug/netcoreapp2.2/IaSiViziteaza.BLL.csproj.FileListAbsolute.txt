@@ -13,12 +13,10 @@ C:\Users\Stefan\Source\Workspaces\Workspace\IaSiViziteaza\IaSiViziteaza.BLL\obj\
 C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza.BLL\bin\Debug\netcoreapp2.2\IaSiViziteaza.BLL.deps.json
 C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza.BLL\bin\Debug\netcoreapp2.2\IaSiViziteaza.BLL.dll
 C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza.BLL\bin\Debug\netcoreapp2.2\IaSiViziteaza.BLL.pdb
-C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza.BLL\bin\Debug\netcoreapp2.2\IaSiViziteaza.DAL.dll
 C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza.BLL\bin\Debug\netcoreapp2.2\IaSiViziteaza.DAL.ORC.dll
 C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza.BLL\bin\Debug\netcoreapp2.2\Oracle.ManagedDataAccess.dll
 C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza.BLL\bin\Debug\netcoreapp2.2\IaSiViziteaza.DAL.ORC.pdb
 C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza.BLL\bin\Debug\netcoreapp2.2\IaSiViziteaza.DAL.ORC.dll.config
-C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza.BLL\bin\Debug\netcoreapp2.2\IaSiViziteaza.DAL.pdb
 C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza.BLL\obj\Debug\netcoreapp2.2\IaSiViziteaza.BLL.csprojAssemblyReference.cache
 C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza.BLL\obj\Debug\netcoreapp2.2\IaSiViziteaza.BLL.csproj.CoreCompileInputs.cache
 C:\Users\Stefan\Desktop\PSBD-Proiect\IaSiViziteaza.BLL\obj\Debug\netcoreapp2.2\IaSiViziteaza.BLL.AssemblyInfoInputs.cache

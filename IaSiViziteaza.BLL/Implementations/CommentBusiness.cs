@@ -1,7 +1,7 @@
 ﻿using IaSiViziteaza.BLL.Abstractions;
 using IaSiViziteaza.BLL.DTO;
-using IaSiViziteaza.DAL;
-using IaSiViziteaza.DAL.Abstraction;
+using IaSiViziteaza.DAL.ORC;
+using IaSiViziteaza.DAL.ORC.Abstraction;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,9 +11,9 @@ namespace IaSiViziteaza.BLL.Implementations
 {
     public class CommentBusiness : ICommentBusiness
     {
-        private readonly IRepository _repository;
+        private readonly IRepositoryORC _repository;
 
-        public CommentBusiness(IRepository repository)
+        public CommentBusiness(IRepositoryORC repository)
         {
             _repository = repository;
         }
@@ -35,17 +35,15 @@ namespace IaSiViziteaza.BLL.Implementations
                 Attraction = attraction,
                 User = user,
                 CommentContent = commentDTO.CommentContent,
-                Id = new Guid(),
                 PostingDate = DateTime.Now,
-                Rating = 0,
             };
             attraction.Comments.Add(comment);
-            _repository.Add<Comment>(comment);
+            _repository.AddComment(comment);
 
             return true;
         }
 
-        public bool DeleteCommentById(Guid id)
+        public bool DeleteCommentById(int id)
         {
             //var x = _repository.GetUserByEmail(userEmail);
             //if (_repository.CheckUserPriority(x, 20)==false)
@@ -54,12 +52,8 @@ namespace IaSiViziteaza.BLL.Implementations
             return _repository.Delete<Comment>(id);
         }
 
-        public IList<Comment> GetComment()
-        {
-            return _repository.Get<Comment>();
-        }
 
-        public IList<CommentReturnDTO> GetCommentsByAttractionId(Guid attractionId)
+        public IList<CommentReturnDTO> GetCommentsByAttractionId(int attractionId)
         {
             var x = _repository.GetCommentsByAttractionId(attractionId)
                 .Select(p => new CommentReturnDTO()
@@ -75,7 +69,7 @@ namespace IaSiViziteaza.BLL.Implementations
             return x;
         }
 
-        public void UpdateCommentById(Guid id, bool status)
+        public void UpdateCommentById(int id, bool status)
         {
             _repository.UpdateCommentById(id, status);
         }

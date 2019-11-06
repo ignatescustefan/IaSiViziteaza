@@ -45,7 +45,7 @@ namespace IaSiViziteaza.BLL.Implementations
                 UserAccessRights = new List<UserAccessRight>()
             };
             user.UserAccessRights.Add(userAccessRight);
-            _repository.Add(user);
+            _repository.AddUser(user);
             
             return true;
         }
@@ -76,13 +76,13 @@ namespace IaSiViziteaza.BLL.Implementations
                 UserAccessRights = new List<UserAccessRight>()
             };
             user.UserAccessRights.Add(userAccessRight);
-            _repository.Add(user);
+            _repository.AddUser(user);
             return true;
         }
 
         public bool CheckUserCredentials(UserLoginDTO userLoginDTO)
         {
-            var x = _repository.GetUserByEmailAndPassword<User>(userLoginDTO.Email, userLoginDTO.Password);
+            var x = _repository.GetUserByEmailAndPassword(userLoginDTO.Email, userLoginDTO.Password);
             if (null != x)
                 return true;
             return false;
@@ -104,7 +104,7 @@ namespace IaSiViziteaza.BLL.Implementations
 
         public IList<User> Get()
         {
-            return _repository.Get<User>();
+            return _repository.GetUsers();
         }
 
         public UserReturnDTO GetUserByEmail(string email)
