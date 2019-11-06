@@ -85,6 +85,7 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
             cmd.Parameters.Add("v_desc", OracleDbType.Varchar2).Value = attraction.Description;
             cmd.Parameters.Add("v_open_time", OracleDbType.Varchar2).Value = DateTime.Parse(attraction.OpenTime.ToString());
             cmd.Parameters.Add("v_close_time", OracleDbType.Varchar2).Value = DateTime.Parse(attraction.CloseTime.ToString());
+            cmd.Parameters.Add("v_phone_number", OracleDbType.Varchar2).Value = attraction.PhoneNumber;
             cmd.Parameters.Add("v_image", OracleDbType.Varchar2).Value = attraction.ImagePath;
             cmd.Parameters.Add("v_attraction_type_id", OracleDbType.Int32).Value = attraction.AttractionType.Id;
             cmd.Parameters.Add("v_location_id", OracleDbType.Int32).Value = AddLocation(attraction.Location);
@@ -308,10 +309,12 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
                         OpenTime = rdr.GetDateTime(3).TimeOfDay,
                         CloseTime = rdr.GetDateTime(4).TimeOfDay,
                         CreateAtractionTime = rdr.GetDateTime(5),
+                        Rating = rdr.GetInt32(10),
+                        PhoneNumber = rdr.GetString(11),
                         ImagePath = rdr.GetString(6),
-                        Location = new Location() { Id = rdr.GetInt32(7) },
-                        AttractionType = new AttractionType() { Id = rdr.GetInt32(8) },
-                        User = new User() { Id = rdr.GetInt32(9) }
+                        Location = new Location() { Id = rdr.GetInt32(7), Address = rdr.GetString(15), PostalCode = uint.Parse(rdr.GetString(16)) },
+                        AttractionType = new AttractionType() { Id = rdr.GetInt32(8), Title = rdr.GetString(12) },
+                        User = new User() { Id = rdr.GetInt32(9), FirstName = rdr.GetString(13), LastName = rdr.GetString(14) }
 
                     });
                 }
@@ -353,7 +356,15 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
                 while (rdr.Read())
                 {
                     // System.Diagnostics.Debug.WriteLine(rdr.GetInt32(0) + rdr.GetString(1) + rdr.GetString(2) + rdr.GetString(3));
-                    list.Add(new Attraction()
+                    /*{< ID_ATTRACTION = 10,NAME = ceva,DESCRIPTION = o descriere,OPEN_TIME = 05 - NOV - 19,
+                     * CLOSE_TIME = 05 - NOV - 19,CREATE_ATTRACTION_TIME = 05 - NOV - 19,
+                     * IMAGE_PATH =/ img / ceva,LOCATION_ID_LOCATION = 26,ATT_TYPE_ID_ATTRACTION_TYPE = 2,
+                     * USER_ID_USER = 2,
+                     * RATING = 1,PHONE_NUMBER = 3123123,
+                     * TITLE = string,FIRST_NAME = dudu,
+                     * LAST_NAME = marin,
+                     * ADDRESS = undeva frumos,POSTAL_CODE = 1020312 >,}
+                    */list.Add(new Attraction()
                     {
                         Id = rdr.GetInt32(0),
                         Name = rdr.GetString(1),
@@ -361,10 +372,12 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
                         OpenTime = rdr.GetDateTime(3).TimeOfDay,
                         CloseTime = rdr.GetDateTime(4).TimeOfDay,
                         CreateAtractionTime = rdr.GetDateTime(5),
+                        Rating=rdr.GetInt32(10),
+                        PhoneNumber=rdr.GetString(11),
                         ImagePath = rdr.GetString(6),
-                        Location = new Location() { Id = rdr.GetInt32(7) },
-                        AttractionType = new AttractionType() { Id = rdr.GetInt32(8) },
-                        User = new User() { Id = rdr.GetInt32(9) }
+                        Location = new Location() { Id = rdr.GetInt32(7),Address= rdr.GetString(15),PostalCode= uint.Parse(rdr.GetString(16)) },
+                        AttractionType = new AttractionType() { Id = rdr.GetInt32(8),Title=rdr.GetString(12)},
+                        User = new User() { Id = rdr.GetInt32(9) ,FirstName= rdr.GetString(13),LastName= rdr.GetString(14) }
 
                     });
                 }

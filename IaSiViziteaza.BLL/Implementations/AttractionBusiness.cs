@@ -41,7 +41,7 @@ namespace IaSiViziteaza.BLL.Implementations
                 CloseTime = attractionDTO.CloseTime,
                 CreateAtractionTime = DateTime.Now,
                 Location = location,
-                ImagePath = @attractionDTO.Image,
+                ImagePath = @attractionDTO.Base64ToImage(attractionDTO.Image),
             });
             return true;
 

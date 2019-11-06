@@ -23,21 +23,19 @@ namespace IaSiViziteaza.BLL.Implementations
             if (_repository.CheckUserPriority(user, 10) ==false && _repository.CheckUserPriority(user, 20) == false)
                 return false;
 
-            var attraction = _repository.GetEntityById<Attraction>(commentDTO.AttractionId);
+            //var attraction = _repository.GetEntityById<Attraction>(commentDTO.AttractionId);
 
-            if(null == attraction.Comments)
-            {
-                attraction.Comments = new List<Comment>();
-            }
+            //if(null == attraction.Comments)
+            //{
+            //    attraction.Comments = new List<Comment>();
+            //}
             
             Comment comment = new Comment()
             {
-                Attraction = attraction,
+                Attraction = new Attraction() { Id = commentDTO.AttractionId },
                 User = user,
                 CommentContent = commentDTO.CommentContent,
-                PostingDate = DateTime.Now,
             };
-            attraction.Comments.Add(comment);
             _repository.AddComment(comment);
 
             return true;
