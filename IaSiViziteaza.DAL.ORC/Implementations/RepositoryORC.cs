@@ -4,23 +4,23 @@ using Oracle.ManagedDataAccess.Types;
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace IaSiViziteaza.DAL.ORC.Implementations
 {
     public class RepositoryORC : IRepositoryORC
     {
 
+        private readonly OracleConnection connection;
+
         public RepositoryORC()
         {
+            connection = DataBaseConnection.GetDbInstance().GetDBConnection();
         }
 
         public void AddAttractionType(AttractionType attractionType)
         {
             OracleCommand cmd = new OracleCommand("insert_procedure.insert_attraction_type",
-                DataBaseConnection.getDbInstance().GetDBConnection())
+                connection)
             {
                 CommandType = CommandType.StoredProcedure
             };
@@ -30,7 +30,11 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
             cmd.Parameters.Add("v_IMAGE", OracleDbType.Varchar2).Value = attractionType.ImagePath;
 
             try
-            {
+            {   
+                if(cmd.Connection.State!=ConnectionState.Open)
+                {
+                        cmd.Connection.Open();
+                }
                 cmd.ExecuteNonQuery();
             }
             catch (Exception e)
@@ -39,14 +43,14 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
             }
             finally
             {
-                DataBaseConnection.getDbInstance().closeDBConnection();
+                DataBaseConnection.GetDbInstance().CloseDBConnection();
             }
         }
 
         public int AddLocation(Location location)
         {
             OracleCommand cmd = new OracleCommand("insert_procedure.insert_location",
-                DataBaseConnection.getDbInstance().GetDBConnection())
+                connection)
             {
                 CommandType = CommandType.StoredProcedure
             };
@@ -57,6 +61,10 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
 
             try
             {
+
+                if(cmd.Connection.State!=ConnectionState.Open){
+                    cmd.Connection.Open();
+                }
                 cmd.ExecuteNonQuery();
                 var result = cmd.Parameters["v_location_id"].Value;
 
@@ -68,7 +76,7 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
             }
             finally
             {
-                DataBaseConnection.getDbInstance().closeDBConnection();
+                DataBaseConnection.GetDbInstance().CloseDBConnection();
             }
             return 0;
         }
@@ -76,7 +84,7 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
         public void AddAttraction(Attraction attraction)
         {
             OracleCommand cmd = new OracleCommand("insert_procedure.insert_attraction",
-                DataBaseConnection.getDbInstance().GetDBConnection())
+                connection)
             {
                 CommandType = CommandType.StoredProcedure
             };
@@ -94,6 +102,10 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
 
             try
             {
+
+                if(cmd.Connection.State!=ConnectionState.Open){
+                    cmd.Connection.Open();
+                }
                 cmd.ExecuteNonQuery();
             }
             catch (Exception e)
@@ -102,13 +114,13 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
             }
             finally
             {
-                DataBaseConnection.getDbInstance().closeDBConnection();
+                DataBaseConnection.GetDbInstance().CloseDBConnection();
             }
         }
 
         public void AddUser(User user)
         {
-            OracleCommand cmd = new OracleCommand("insert_procedure.insert_user", DataBaseConnection.getDbInstance().GetDBConnection())
+            OracleCommand cmd = new OracleCommand("insert_procedure.insert_user", connection)
             {
                 CommandType = CommandType.StoredProcedure
             };
@@ -121,29 +133,34 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
 
             try
             {
+                if(cmd.Connection.State!=ConnectionState.Open){
+                    cmd.Connection.Open();
+                }
                 cmd.ExecuteNonQuery();
             }
             catch (Exception e)
             {
-
                 System.Diagnostics.Debug.WriteLine(e.ToString());
             }
             finally
             {
-                DataBaseConnection.getDbInstance().closeDBConnection();
+                DataBaseConnection.GetDbInstance().CloseDBConnection();
             }
         }
 
         public void AddAccesRight(AccessRight accessRight)
         {
             OracleCommand cmd = new OracleCommand("insert_procedure.insert_acces_right",
-                DataBaseConnection.getDbInstance().GetDBConnection())
+                connection)
             {
                 CommandType = CommandType.StoredProcedure
             };
             cmd.Parameters.Add("v_value", OracleDbType.Int32).Value = accessRight.Priority;
             try
             {
+                if(cmd.Connection.State!=ConnectionState.Open){
+                    cmd.Connection.Open();
+                }
                 cmd.ExecuteNonQuery();
             }
             catch (Exception e)
@@ -153,14 +170,14 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
             }
             finally
             {
-                DataBaseConnection.getDbInstance().closeDBConnection();
+                DataBaseConnection.GetDbInstance().CloseDBConnection();
             }
         }
 
         public void AddUserToRight(int user_id, int rigth_id)
         {
             OracleCommand cmd = new OracleCommand("insert_procedure.insert_user_to_right",
-                DataBaseConnection.getDbInstance().GetDBConnection())
+                connection)
             {
                 CommandType = CommandType.StoredProcedure
             };
@@ -168,6 +185,9 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
             cmd.Parameters.Add("v_acces_right_id_acces_right", OracleDbType.Int32).Value = rigth_id;
             try
             {
+                if(cmd.Connection.State!=ConnectionState.Open){
+                    cmd.Connection.Open();
+                }
                 cmd.ExecuteNonQuery();
             }
             catch (Exception e)
@@ -177,13 +197,13 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
             }
             finally
             {
-                DataBaseConnection.getDbInstance().closeDBConnection();
+                DataBaseConnection.GetDbInstance().CloseDBConnection();
             }
         }
 
         public void AddComment(Comment comment)
         {
-            OracleCommand cmd = new OracleCommand("insert_procedure.insert_comment", DataBaseConnection.getDbInstance().GetDBConnection())
+            OracleCommand cmd = new OracleCommand("insert_procedure.insert_comment", connection)
             {
                 CommandType = CommandType.StoredProcedure
             };
@@ -194,6 +214,9 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
 
             try
             {
+                if(cmd.Connection.State!=ConnectionState.Open){
+                    cmd.Connection.Open();
+                }
                 cmd.ExecuteNonQuery();
             }
             catch (Exception e)
@@ -203,13 +226,13 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
             }
             finally
             {
-                DataBaseConnection.getDbInstance().closeDBConnection();
+                DataBaseConnection.GetDbInstance().CloseDBConnection();
             }
         }
 
         public void UpdateUserInformation(User user, string currentEmail)
         {
-            OracleCommand cmd = new OracleCommand("user_methods.update_user_info", DataBaseConnection.getDbInstance().GetDBConnection())
+            OracleCommand cmd = new OracleCommand("user_methods.update_user_info", connection)
             {
                 CommandType = CommandType.StoredProcedure
             };
@@ -221,6 +244,9 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
 
             try
             {
+                if(cmd.Connection.State!=ConnectionState.Open){
+                    cmd.Connection.Open();
+                }
                 cmd.ExecuteNonQuery();
             }
             catch (Exception e)
@@ -230,13 +256,13 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
             }
             finally
             {
-                DataBaseConnection.getDbInstance().closeDBConnection();
+                DataBaseConnection.GetDbInstance().CloseDBConnection();
             }
         }
 
         public IList<AttractionType> GetAttractionTypes()
         {
-            OracleCommand cmd = new OracleCommand("get_function.get_attractiontype", DataBaseConnection.getDbInstance().GetDBConnection())
+            OracleCommand cmd = new OracleCommand("get_function.get_attractiontype", connection)
             {
                 CommandType = System.Data.CommandType.StoredProcedure
             };
@@ -247,12 +273,15 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
 
             try
             {
+                if(cmd.Connection.State!=ConnectionState.Open){
+                    cmd.Connection.Open();
+                }
                 cmd.ExecuteNonQuery();
 
                 OracleRefCursor t = (OracleRefCursor)cmd.Parameters[0].Value;
 
                 OracleDataReader rdr = t.GetDataReader();
-                var dataTable = rdr.GetSchemaTable();
+
                 var list = new List<AttractionType>();
                 while (rdr.Read())
                 {
@@ -274,13 +303,13 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
             }
             finally
             {
-                DataBaseConnection.getDbInstance().closeDBConnection();
+                DataBaseConnection.GetDbInstance().CloseDBConnection();
             }
         }
 
         public IList<Attraction> GetAttractions()
         {
-            OracleCommand cmd = new OracleCommand("get_function.get_attraction", DataBaseConnection.getDbInstance().GetDBConnection())
+            OracleCommand cmd = new OracleCommand("get_function.get_attraction", connection)
             {
                 CommandType = System.Data.CommandType.StoredProcedure
             };
@@ -291,6 +320,9 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
 
             try
             {
+                if(cmd.Connection.State!=ConnectionState.Open){
+                    cmd.Connection.Open();
+                }
                 cmd.ExecuteNonQuery();
 
                 OracleRefCursor t = (OracleRefCursor)cmd.Parameters[0].Value;
@@ -327,13 +359,13 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
             }
             finally
             {
-                DataBaseConnection.getDbInstance().closeDBConnection();
+                DataBaseConnection.GetDbInstance().CloseDBConnection();
             }
         }
 
         public IList<Attraction> GetAttractionsByType(string attractionTitle)
         {
-            OracleCommand cmd = new OracleCommand("get_function.get_attraction_by_attraction_type", DataBaseConnection.getDbInstance().GetDBConnection())
+            OracleCommand cmd = new OracleCommand("get_function.get_attraction_by_attraction_type", connection)
             {
                 CommandType = System.Data.CommandType.StoredProcedure
             };
@@ -347,6 +379,9 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
 
             try
             {
+                if(cmd.Connection.State!=ConnectionState.Open){
+                    cmd.Connection.Open();
+                }
                 cmd.ExecuteNonQuery();
 
                 OracleRefCursor t = (OracleRefCursor)cmd.Parameters[0].Value;
@@ -355,16 +390,7 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
                 var list = new List<Attraction>();
                 while (rdr.Read())
                 {
-                    // System.Diagnostics.Debug.WriteLine(rdr.GetInt32(0) + rdr.GetString(1) + rdr.GetString(2) + rdr.GetString(3));
-                    /*{< ID_ATTRACTION = 10,NAME = ceva,DESCRIPTION = o descriere,OPEN_TIME = 05 - NOV - 19,
-                     * CLOSE_TIME = 05 - NOV - 19,CREATE_ATTRACTION_TIME = 05 - NOV - 19,
-                     * IMAGE_PATH =/ img / ceva,LOCATION_ID_LOCATION = 26,ATT_TYPE_ID_ATTRACTION_TYPE = 2,
-                     * USER_ID_USER = 2,
-                     * RATING = 1,PHONE_NUMBER = 3123123,
-                     * TITLE = string,FIRST_NAME = dudu,
-                     * LAST_NAME = marin,
-                     * ADDRESS = undeva frumos,POSTAL_CODE = 1020312 >,}
-                    */list.Add(new Attraction()
+                    list.Add(new Attraction()
                     {
                         Id = rdr.GetInt32(0),
                         Name = rdr.GetString(1),
@@ -390,13 +416,79 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
             }
             finally
             {
-                DataBaseConnection.getDbInstance().closeDBConnection();
+                DataBaseConnection.GetDbInstance().CloseDBConnection();
+            }
+        }
+
+        public IList<Attraction> GetAttractionById(int attractionId)
+        {
+            OracleCommand cmd = new OracleCommand("get_function.get_attraction_by_id", connection)
+            {
+                CommandType = System.Data.CommandType.StoredProcedure
+            };
+
+            cmd.Parameters.Add(new OracleParameter("v_attraction", OracleDbType.RefCursor, ParameterDirection.Output));
+            cmd.Parameters["v_attraction"].Direction = ParameterDirection.ReturnValue;
+
+            cmd.Parameters.Add("v_attraction_id", OracleDbType.Int32, ParameterDirection.Input).Value = attractionId;
+            OracleDataAdapter oracleDataAdapter = new OracleDataAdapter(cmd);
+
+            try
+            {
+                if(cmd.Connection.State!=ConnectionState.Open){
+                    cmd.Connection.Open();
+                }
+                cmd.ExecuteNonQuery();
+
+                OracleRefCursor t = (OracleRefCursor)cmd.Parameters[0].Value;
+
+                OracleDataReader rdr = t.GetDataReader();
+                var list = new List<Attraction>();
+                while (rdr.Read())
+                {
+                    // System.Diagnostics.Debug.WriteLine(rdr.GetInt32(0) + rdr.GetString(1) + rdr.GetString(2) + rdr.GetString(3));
+                    /*{< ID_ATTRACTION = 10,NAME = ceva,DESCRIPTION = o descriere,OPEN_TIME = 05 - NOV - 19,
+                     * CLOSE_TIME = 05 - NOV - 19,CREATE_ATTRACTION_TIME = 05 - NOV - 19,
+                     * IMAGE_PATH =/ img / ceva,LOCATION_ID_LOCATION = 26,ATT_TYPE_ID_ATTRACTION_TYPE = 2,
+                     * USER_ID_USER = 2,
+                     * RATING = 1,PHONE_NUMBER = 3123123,
+                     * TITLE = string,FIRST_NAME = dudu,
+                     * LAST_NAME = marin,
+                     * ADDRESS = undeva frumos,POSTAL_CODE = 1020312 >,}
+                    */
+                    list.Add(new Attraction()
+                    {
+                        Id = rdr.GetInt32(0),
+                        Name = rdr.GetString(1),
+                        Description = rdr.GetString(2),
+                        OpenTime = rdr.GetDateTime(3).TimeOfDay,
+                        CloseTime = rdr.GetDateTime(4).TimeOfDay,
+                        CreateAtractionTime = rdr.GetDateTime(5),
+                        Rating = rdr.GetInt32(10),
+                        PhoneNumber = rdr.GetString(11),
+                        ImagePath = rdr.GetString(6),
+                        Location = new Location() { Id = rdr.GetInt32(7), Address = rdr.GetString(15), PostalCode = uint.Parse(rdr.GetString(16)) },
+                        AttractionType = new AttractionType() { Id = rdr.GetInt32(8), Title = rdr.GetString(12) },
+                        User = new User() { Id = rdr.GetInt32(9), FirstName = rdr.GetString(13), LastName = rdr.GetString(14) }
+
+                    });
+                }
+                return list;
+            }
+            catch (Exception e)
+            {
+                System.Diagnostics.Debug.WriteLine(e.ToString());
+                return null;
+            }
+            finally
+            {
+                DataBaseConnection.GetDbInstance().CloseDBConnection();
             }
         }
 
         public bool CheckUserPriority(User user, uint priority)
         {
-            OracleCommand cmd = new OracleCommand("user_methods.check_user_priority", DataBaseConnection.getDbInstance().GetDBConnection())
+            OracleCommand cmd = new OracleCommand("user_methods.check_user_priority", connection)
             {
                 CommandType = CommandType.StoredProcedure
             };
@@ -409,6 +501,9 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
 
             try
             {
+                if(cmd.Connection.State!=ConnectionState.Open){
+                    cmd.Connection.Open();
+                }
                 cmd.ExecuteNonQuery();
                 var result = int.Parse(cmd.Parameters["v_status"].Value.ToString());
 
@@ -421,14 +516,14 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
             }
             finally
             {
-                DataBaseConnection.getDbInstance().closeDBConnection();
+                DataBaseConnection.GetDbInstance().CloseDBConnection();
             }
             return true;
         }
 
         public void UpdateCommentById(int id, bool status)
         {
-            OracleCommand cmd = new OracleCommand("update_comment_rating", DataBaseConnection.getDbInstance().GetDBConnection())
+            OracleCommand cmd = new OracleCommand("update_comment_rating", connection)
             {
                 CommandType = CommandType.StoredProcedure
             };
@@ -437,6 +532,9 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
             cmd.Parameters.Add("v_increase", OracleDbType.Int32).Value = status;
             try
             {
+                if(cmd.Connection.State!=ConnectionState.Open){
+                    cmd.Connection.Open();
+                }
                 cmd.ExecuteNonQuery();
             }
             catch (Exception e)
@@ -446,13 +544,13 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
             }
             finally
             {
-                DataBaseConnection.getDbInstance().closeDBConnection();
+                DataBaseConnection.GetDbInstance().CloseDBConnection();
             }
         }
 
         public void UpdateRatingAttractionById(int id, bool status)
         {
-            OracleCommand cmd = new OracleCommand("update_attraction_rating", DataBaseConnection.getDbInstance().GetDBConnection())
+            OracleCommand cmd = new OracleCommand("update_attraction_rating", connection)
             {
                 CommandType = CommandType.StoredProcedure
             };
@@ -461,6 +559,9 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
             cmd.Parameters.Add("v_increase", OracleDbType.Int32).Value = status;
             try
             {
+                if(cmd.Connection.State!=ConnectionState.Open){
+                    cmd.Connection.Open();
+                }
                 cmd.ExecuteNonQuery();
             }
             catch (Exception e)
@@ -470,13 +571,13 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
             }
             finally
             {
-                DataBaseConnection.getDbInstance().closeDBConnection();
+                DataBaseConnection.GetDbInstance().CloseDBConnection();
             }
         }
 
         public AttractionType GetAttractionTypeByTitle(string title)
         {
-            OracleCommand cmd = new OracleCommand("get_function.get_attractiontypedata", DataBaseConnection.getDbInstance().GetDBConnection())
+            OracleCommand cmd = new OracleCommand("get_function.get_attractiontypedata", connection)
             {
                 CommandType = CommandType.StoredProcedure
             };
@@ -490,6 +591,9 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
 
             try
             {
+                if(cmd.Connection.State!=ConnectionState.Open){
+                    cmd.Connection.Open();
+                }
                 cmd.ExecuteNonQuery();
                 OracleRefCursor t = (OracleRefCursor)cmd.Parameters["v_attraction_type"].Value;
                 OracleDataReader rd = t.GetDataReader();
@@ -513,9 +617,8 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
             }
             finally
             {
-                DataBaseConnection.getDbInstance().closeDBConnection();
+                DataBaseConnection.GetDbInstance().CloseDBConnection();
             }
-
             return null;
         }
 
@@ -527,7 +630,7 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
         public User GetUserByEmail(string email)
         {
 
-            OracleCommand cmd = new OracleCommand("user_methods.get_user_by_email", DataBaseConnection.getDbInstance().GetDBConnection())
+            OracleCommand cmd = new OracleCommand("user_methods.get_user_by_email", connection)
             {
                 CommandType = CommandType.StoredProcedure
             };
@@ -541,6 +644,9 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
 
             try
             {
+                if(cmd.Connection.State!=ConnectionState.Open){
+                    cmd.Connection.Open();
+                }
                 cmd.ExecuteNonQuery();
                 OracleRefCursor t = (OracleRefCursor)cmd.Parameters["v_user"].Value;
                 OracleDataReader rd = t.GetDataReader();
@@ -563,10 +669,6 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
 
                 System.Diagnostics.Debug.WriteLine(e.ToString());
             }
-            finally
-            {
-                DataBaseConnection.getDbInstance().closeDBConnection();
-            }
 
             return null;
         }
@@ -578,7 +680,7 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
 
         public IList<Comment> GetCommentsByAttraction(Attraction attraction)
         {
-            OracleCommand cmd = new OracleCommand("get_function.get_comments_by_attraction_id", DataBaseConnection.getDbInstance().GetDBConnection())
+            OracleCommand cmd = new OracleCommand("get_function.get_comments_by_attraction_id", connection)
             {
                 CommandType = System.Data.CommandType.StoredProcedure
             };
@@ -592,6 +694,10 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
 
             try
             {
+                
+                if(cmd.Connection.State!=ConnectionState.Open){
+                    cmd.Connection.Open();
+                }
                 cmd.ExecuteNonQuery();
 
                 OracleRefCursor t = (OracleRefCursor)cmd.Parameters["v_comments"].Value;
@@ -627,7 +733,7 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
             }
             finally
             {
-                DataBaseConnection.getDbInstance().closeDBConnection();
+                DataBaseConnection.GetDbInstance().CloseDBConnection();
             }
         }
 
@@ -638,7 +744,7 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
 
         public User GetUserByEmailAndPassword(string email, string password)
         {
-            OracleCommand cmd = new OracleCommand("user_methods.user_login", DataBaseConnection.getDbInstance().GetDBConnection())
+            OracleCommand cmd = new OracleCommand("user_methods.user_login", connection)
             {
                 CommandType = CommandType.StoredProcedure
             };
@@ -652,6 +758,9 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
 
             try
             {
+                if(cmd.Connection.State!=ConnectionState.Open){
+                    cmd.Connection.Open();
+                }
                 cmd.ExecuteNonQuery();
                 OracleRefCursor t = (OracleRefCursor)cmd.Parameters["v_user"].Value;
                 OracleDataReader rd = t.GetDataReader();
@@ -676,7 +785,7 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
             }
             finally
             {
-                DataBaseConnection.getDbInstance().closeDBConnection();
+                DataBaseConnection.GetDbInstance().CloseDBConnection();
             }
 
             return null;
@@ -686,6 +795,7 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
 
         public bool Delete<TEntity>(int id) where TEntity : BaseEntity
         {
+            //TODO
             throw new NotImplementedException();
         }
         
@@ -696,7 +806,67 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
 
         public IList<User> GetUsers()
         {
-            throw new NotImplementedException();
+            //TODO
+            //get_users
+
+            OracleCommand cmd = new OracleCommand("get_function.get_users", connection)
+            {
+                CommandType = System.Data.CommandType.StoredProcedure
+            };
+
+            cmd.Parameters.Add(new OracleParameter("v_users", OracleDbType.RefCursor, ParameterDirection.Output));
+            cmd.Parameters["v_users"].Direction = ParameterDirection.ReturnValue;
+
+            OracleDataAdapter oracleDataAdapter = new OracleDataAdapter(cmd);
+
+            try
+            {
+                if (cmd.Connection.State != ConnectionState.Open)
+                {
+                    cmd.Connection.Open();
+                }
+                cmd.ExecuteNonQuery();
+
+                OracleRefCursor t = (OracleRefCursor)cmd.Parameters[0].Value;
+
+                OracleDataReader rd = t.GetDataReader();
+                var list = new List<User>();
+                while (rd.Read())
+                {
+                    // System.Diagnostics.Debug.WriteLine(rdr.GetInt32(0) + rdr.GetString(1) + rdr.GetString(2) + rdr.GetString(3));
+                    /*{< ID_ATTRACTION = 10,NAME = ceva,DESCRIPTION = o descriere,OPEN_TIME = 05 - NOV - 19,
+                     * CLOSE_TIME = 05 - NOV - 19,CREATE_ATTRACTION_TIME = 05 - NOV - 19,
+                     * IMAGE_PATH =/ img / ceva,LOCATION_ID_LOCATION = 26,ATT_TYPE_ID_ATTRACTION_TYPE = 2,
+                     * USER_ID_USER = 2,
+                     * RATING = 1,PHONE_NUMBER = 3123123,
+                     * TITLE = string,FIRST_NAME = dudu,
+                     * LAST_NAME = marin,
+                     * ADDRESS = undeva frumos,POSTAL_CODE = 1020312 >,}
+                    */
+                    list.Add(new User()
+                    {
+                        Id = rd.GetInt32(0),
+                        Email = rd.GetString(1),
+                        FirstName = rd.GetString(2),
+                        LastName = rd.GetString(3),
+                        PhoneNumber = rd.GetString(4),
+                        Password=rd.GetString(5)
+                    });
+                }
+                return list;
+            }
+            catch (Exception e)
+            {
+                System.Diagnostics.Debug.WriteLine(e.ToString());
+                return null;
+            }
+            finally
+            {
+                DataBaseConnection.GetDbInstance().CloseDBConnection();
+            }
+
         }
+
+        
     }
 }

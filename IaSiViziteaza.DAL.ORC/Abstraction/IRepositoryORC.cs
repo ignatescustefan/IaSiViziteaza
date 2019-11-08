@@ -40,6 +40,9 @@ namespace IaSiViziteaza.DAL.ORC.Abstraction
 
         bool CheckUserPriority(User user, uint priority);
         IList<Comment> GetCommentsByAttractionId(int attractionId);
+
+        IList<Attraction> GetAttractionById(int attractionId);
+
         IList<Comment> GetCommentsByAttraction(Attraction attraction);
         IList<Attraction> GetAttractions();
 

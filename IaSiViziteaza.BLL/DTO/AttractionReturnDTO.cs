@@ -20,5 +20,13 @@ namespace IaSiViziteaza.BLL.DTO
         public TimeSpan CloseTime { get; set; }
         public DateTime CreateAtractionTime { get; set; }
         public double Rating { get; set; }
+        public string ImageToBase64(string imagePath)
+        {
+            string base64ImageRepresentation = "";
+            byte[] imageArray = System.IO.File.ReadAllBytes("AttractionImages/" + imagePath);
+            base64ImageRepresentation = Convert.ToBase64String(imageArray);
+
+            return @"data:image/png;base64,"+base64ImageRepresentation;
+        }
     }
 }

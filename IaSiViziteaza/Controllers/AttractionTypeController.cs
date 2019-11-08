@@ -48,7 +48,7 @@ namespace IaSiViziteaza.Controllers
             {
                 Title = attractionTypeDTO.Title,
                 Description = attractionTypeDTO.Description,
-                ImagePath = @attractionTypeDTO.Image
+                ImagePath = @attractionTypeDTO.Base64ToImage(attractionTypeDTO.Image)
             });
 
             return Ok(value);

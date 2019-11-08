@@ -23,7 +23,7 @@ namespace IaSiViziteaza.DAL.ORC
         }
 
 
-        public static DataBaseConnection getDbInstance()
+        public static DataBaseConnection GetDbInstance()
         {
             if (dbInstance == null)
             {
@@ -37,7 +37,7 @@ namespace IaSiViziteaza.DAL.ORC
         {
             try
             {
-                createConnectionstring();
+                CreateConnectionstring();
                 conn = new OracleConnection(constr);
                 conn.Open();
                 System.Diagnostics.Debug.WriteLine("Connected");
@@ -50,7 +50,7 @@ namespace IaSiViziteaza.DAL.ORC
             return conn;
         }
 
-        public void closeDBConnection()
+        public void CloseDBConnection()
         {
             try
             {
@@ -70,7 +70,7 @@ namespace IaSiViziteaza.DAL.ORC
 
         }
 
-        public static void createConnectionstring()
+        public static void CreateConnectionstring()
         {
 
             try

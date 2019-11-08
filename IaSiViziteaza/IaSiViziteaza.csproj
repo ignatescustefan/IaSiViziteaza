@@ -23,4 +23,9 @@
     <ProjectReference Include="..\IaSiViziteaza.BLL\IaSiViziteaza.BLL.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="AttractionImage\" />
+    <Folder Include="AttractionTypeImage\" />
+  </ItemGroup>
+
 </Project>

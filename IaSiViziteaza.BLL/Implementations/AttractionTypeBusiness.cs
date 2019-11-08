@@ -16,6 +16,14 @@ namespace IaSiViziteaza.BLL.Implementations
             _repository = repositoryORC;
         }
 
+        private static string ImageToBase64(string imagePath)
+        {
+            string base64ImageRepresentation = "";
+            byte[] imageArray = System.IO.File.ReadAllBytes("AttractionTypeImages/" + imagePath);
+            base64ImageRepresentation = Convert.ToBase64String(imageArray);
+
+            return @"data:image/png;base64," + base64ImageRepresentation;
+        }
         public bool AddAttractionType(AttractionType attractionType)
         {
             if (_repository.FindAttractionTypeByTitle(attractionType.Title) == true)
@@ -63,12 +71,14 @@ namespace IaSiViziteaza.BLL.Implementations
         public IList<AttractionType> GetAttractionTypes()
         {
             var x=_repository.GetAttractionTypes();
+
             foreach(var attr in x)
             {
                 if (null == attr.ImagePath)
                 {
                     attr.ImagePath = @"";
                 }
+                attr.ImagePath = ImageToBase64(attr.ImagePath);
             }
             return x;
         }

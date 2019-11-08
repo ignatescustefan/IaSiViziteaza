@@ -14,6 +14,7 @@ export class ListComponent implements OnInit {
   ngOnInit() {
     this.atypeService.getAType().subscribe((data) => {
       this.attractiontypes = data;
+      // console.log(data);
     });
   }
   delete(idAttrType) {

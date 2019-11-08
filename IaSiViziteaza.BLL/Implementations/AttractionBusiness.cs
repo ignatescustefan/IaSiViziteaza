@@ -54,7 +54,7 @@ namespace IaSiViziteaza.BLL.Implementations
 
         public IList<AttractionReturnDTO> GetAttraction()
         {
-            var x = _repository.GetAttractions()
+            var attractionReturnDTOs = _repository.GetAttractions()
                 .Select(p => new AttractionReturnDTO()
                 {
                     AttractionId = p.Id,
@@ -75,14 +75,16 @@ namespace IaSiViziteaza.BLL.Implementations
                 .OrderBy(test=>test.Name)
                 .ToList();
 
-
-            return x;
+            foreach (var x in attractionReturnDTOs)
+            {
+                x.Image = x.ImageToBase64(x.Image);
+            }
+            return attractionReturnDTOs;
         }
 
         public AttractionReturnDTO GetAttractionById(int id)
         {
-            return _repository.GetAttractions()
-                .Where(att => att.Id == id)
+            var attr= _repository.GetAttractionById(id)
                 .Select(p => new AttractionReturnDTO()
                 {
                     AttractionId = p.Id,
@@ -101,11 +103,13 @@ namespace IaSiViziteaza.BLL.Implementations
                     Title = p.AttractionType.Title
                 })
                 .FirstOrDefault();
+            attr.Image = attr.ImageToBase64(attr.Image);
+            return attr;
         }
 
         public IList<AttractionReturnDTO> GetAttractionsByType(string attractionTitle)
         {
-            var x = _repository.GetAttractionsByType(attractionTitle)
+            var attractionReturnDTOs = _repository.GetAttractionsByType(attractionTitle)
                 .Select(p => new AttractionReturnDTO()
                 {
                     AttractionId = p.Id,
@@ -125,8 +129,11 @@ namespace IaSiViziteaza.BLL.Implementations
                 })
                 .ToList();
 
-
-            return x;
+            foreach(var x in attractionReturnDTOs)
+            {
+                x.Image = x.ImageToBase64(x.Image);
+            }
+            return attractionReturnDTOs;
         }
 
         public void UpdateRatingAttractionById(int id, bool status)

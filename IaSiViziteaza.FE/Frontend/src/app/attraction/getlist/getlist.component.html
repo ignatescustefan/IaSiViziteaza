@@ -1,11 +1,13 @@
 <h1 style="text-align:center">ATTRACTIONS LIST</h1>
 <ul class="list-group">
+  <button type="button" class="button" *ngIf="isAdmin == 'true'" routerLink="/attractions/add">ADD ATTRACTION</button>
   <li class="list-group-item" *ngFor="let attraction of attractions; let i = index">
 
     <body>
       <div class="container">
         <div class="imgBx">
-          <img src="../../../assets/AttractionImages/{{attraction.image}}" *ngIf="attraction.image" class="imgPlaceholder">
+          <img [src]="attraction.image" *ngIf="attraction.image"
+            class="imgPlaceholder">
         </div>
         <div class="details">
           <div class="content">
@@ -19,14 +21,12 @@
             PostedBy: {{attraction.firstNameUser}} {{attraction.lastNameUser}}<br>
           </div>
         </div>
-        <button type="button" class="rating" [routerLink]="['./' + attraction.attractionId]">Get Attraction
-          Comments</button>
-        <button type="button" class="close" aria-label="Close" *ngIf="isAdmin == 'true'"
-          (click)=delete(attraction.attractionId)> <span aria-hidden="true">×</span></button>
+        <button class="rating" [routerLink]="['./' + attraction.attractionId]">Get Attraction Comments</button>
+        <button class="close" aria-label="Close" *ngIf="isAdmin == 'true'" (click)=delete(attraction.attractionId)>
+          <span aria-hidden="true">×</span></button>
         <button class="rating" [disabled]="isAuthenticate == 'false'"
           (click)="addLike(i)">{{attraction.rating}}</button><br>
       </div>
     </body>
   </li>
 </ul>
-<button type="button" class="button" *ngIf="isAdmin == 'true'" routerLink="/attractions/add">ADD ATTRACTION</button>
