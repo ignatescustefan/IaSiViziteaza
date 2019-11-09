@@ -11,8 +11,8 @@ namespace IaSiViziteaza.BLL.Implementations
     public class UserBusiness : IUserBusiness
     {
         private readonly IRepositoryORC _repository;
-        private readonly int NormalUser =20;
-        private readonly int AdminUser = 30;
+        private readonly int NormalUser =2;
+        private readonly int AdminUser = 3;
      //   private readonly Guid MaxUser = Guid.Parse("15da1bd7-9832-4426-fbc3-08d706cf10c5");
 
         public UserBusiness(IRepositoryORC repository)
@@ -27,26 +27,20 @@ namespace IaSiViziteaza.BLL.Implementations
                 return false;
             }
 
-            int id = new int();
 
-            UserAccessRight userAccessRight = new UserAccessRight()
-            {
-                AccessRightId = AdminUser,
-                UserId = id
-            };
             var user = new User()
             {
-                Id = id,
                 Email = userRegisterDTO.Email,
                 Password = userRegisterDTO.Password,
                 FirstName = userRegisterDTO.FirstName,
                 LastName = userRegisterDTO.LastName,
                 PhoneNumber = userRegisterDTO.PhoneNumber,
-                UserAccessRights = new List<UserAccessRight>()
             };
-            user.UserAccessRights.Add(userAccessRight);
             _repository.AddUser(user);
-            
+
+            var user_id = _repository.GetUserByEmail(userRegisterDTO.Email).Id;
+            _repository.AddUserToRight(user_id, AdminUser);
+
             return true;
         }
 
@@ -57,26 +51,19 @@ namespace IaSiViziteaza.BLL.Implementations
                 return false;
             }
 
-            int id = new int();
-
-            UserAccessRight userAccessRight = new UserAccessRight()
-            {
-                AccessRightId = NormalUser,
-                UserId = id
-            };
 
             var user = new User()
             {
-                Id = id,
                 Email = userRegisterDTO.Email,
                 Password = userRegisterDTO.Password,
                 FirstName = userRegisterDTO.FirstName,
                 LastName = userRegisterDTO.LastName,
                 PhoneNumber = userRegisterDTO.PhoneNumber,
-                UserAccessRights = new List<UserAccessRight>()
             };
-            user.UserAccessRights.Add(userAccessRight);
             _repository.AddUser(user);
+
+            var user_id = _repository.GetUserByEmail(userRegisterDTO.Email).Id;
+            _repository.AddUserToRight(user_id, NormalUser);
             return true;
         }
 

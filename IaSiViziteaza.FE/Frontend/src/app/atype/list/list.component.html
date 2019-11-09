@@ -7,8 +7,7 @@
             aria-hidden="true">×</span></button></p>
     </div>
     <div class="card">
-      <h2>Path: {{attrtype.imagePath}}</h2>
-      <img src="/assets/AttractionTypeImages/{{attrtype.imagePath}}" *ngIf="attrtype.imagePath" class="imgPlaceholder">
+      <img [src]="attrtype.imagePath" *ngIf="attrtype.imagePath" class="imgPlaceholder">
       <p> {{attrtype.description}}</p>
       <p><button type="button" [routerLink]="[attrtype.title]">Get Attration Type</button></p>
     </div>

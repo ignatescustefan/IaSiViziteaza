@@ -49,7 +49,7 @@ namespace IaSiViziteaza.BLL.Implementations
 
         public bool DeleteAttractionById(int id)
         {
-           return _repository.Delete<Attraction>(id);
+           return _repository.DeleteAttractionById(id);
         }
 
         public IList<AttractionReturnDTO> GetAttraction()

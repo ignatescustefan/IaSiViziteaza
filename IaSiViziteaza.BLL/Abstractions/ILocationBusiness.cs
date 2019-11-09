@@ -9,6 +9,5 @@ namespace IaSiViziteaza.BLL.Abstractions
     {
         //LocationDTO
         void AddLocation(Location location);
-        Location GetLocationById(int id);
     }
 }

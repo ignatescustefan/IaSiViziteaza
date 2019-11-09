@@ -4,7 +4,7 @@
       <h3 style="text-align:left">{{attrTitle}}</h3>
       <div class="imgBx">
 
-        <img src="/assets/AttractionImages/{{attrImage}}" *ngIf="attrImage" style="text-align:center" class="imgPlaceholder">
+        <img [src]="attrImage" *ngIf="attrImage" style="text-align:center" class="imgPlaceholder">
       </div>
     </div>
     <li class="list-group-item" *ngFor="let comm of comments; let i = index">

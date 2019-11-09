@@ -22,8 +22,8 @@ namespace IaSiViziteaza.BLL.DTO
             var image = base64Image.Substring(base64Image.LastIndexOf(',') + 1);
             byte[] imageBytes = Convert.FromBase64String(image);
             // Convert byte[] to Image
-            string filePath = @"..\IaSiViziteaza.FE\Frontend\src\assets\AttractionImages";
-            string name = Name.Replace(' ', '_') + DateTime.Now.Day + "_"
+            string filePath = @"AttractionImages";
+            string name = Name.Replace(' ', '_') + "_" + DateTime.Now.Day + "_"
                 + DateTime.Now.Month + "_"
                 + DateTime.Now.Year + "_"
                 + DateTime.Now.Month + "_"

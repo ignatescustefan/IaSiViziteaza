@@ -13,6 +13,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="AttractionImage\**" />
+    <Compile Remove="AttractionTypeImage\**" />
+    <Content Remove="AttractionImage\**" />
+    <Content Remove="AttractionTypeImage\**" />
+    <EmbeddedResource Remove="AttractionImage\**" />
+    <EmbeddedResource Remove="AttractionTypeImage\**" />
+    <None Remove="AttractionImage\**" />
+    <None Remove="AttractionTypeImage\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
@@ -21,11 +32,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\IaSiViziteaza.BLL\IaSiViziteaza.BLL.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="AttractionImage\" />
-    <Folder Include="AttractionTypeImage\" />
   </ItemGroup>
 
 </Project>

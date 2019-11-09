@@ -65,7 +65,7 @@ namespace IaSiViziteaza.BLL.Implementations
 
         public bool DeleteAttractionTypeById(int id)
         {
-            return _repository.Delete<AttractionType>(id);
+            return _repository.DeleteAttractionTypeById(id);
         }
 
         public IList<AttractionType> GetAttractionTypes()

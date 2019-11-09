@@ -21,9 +21,5 @@ namespace IaSiViziteaza.BLL.Implementations
             _repository.AddLocation(location);
         }
 
-        public Location GetLocationById(int id)
-        {
-            return _repository.GetEntityById<Location>(id);
-        }
     }
 }

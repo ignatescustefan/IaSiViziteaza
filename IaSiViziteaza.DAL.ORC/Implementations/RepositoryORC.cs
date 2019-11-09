@@ -528,8 +528,17 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
                 CommandType = CommandType.StoredProcedure
             };
 
+            int v_increasea;
+            if (status == true)
+            {
+                v_increasea = 1;
+            }
+            else
+            {
+                v_increasea = 0;
+            }
             cmd.Parameters.Add("v_comment_id", OracleDbType.Int32).Value = id;
-            cmd.Parameters.Add("v_increase", OracleDbType.Int32).Value = status;
+            cmd.Parameters.Add("v_increase", OracleDbType.Int32).Value = v_increasea;
             try
             {
                 if(cmd.Connection.State!=ConnectionState.Open){
@@ -555,8 +564,17 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
                 CommandType = CommandType.StoredProcedure
             };
 
+            int v_increasea;
+            if (status == true)
+            {
+                v_increasea = 1;
+            }
+            else
+            {
+                v_increasea = 0;
+            }
             cmd.Parameters.Add("v_attraction_id", OracleDbType.Int32).Value = id;
-            cmd.Parameters.Add("v_increase", OracleDbType.Int32).Value = status;
+            cmd.Parameters.Add("v_increase", OracleDbType.Int32).Value = v_increasea;
             try
             {
                 if(cmd.Connection.State!=ConnectionState.Open){
@@ -792,23 +810,8 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
         }
 
 
-
-        public bool Delete<TEntity>(int id) where TEntity : BaseEntity
-        {
-            //TODO
-            throw new NotImplementedException();
-        }
-        
-        public TEntity GetEntityById<TEntity>(int id) where TEntity : BaseEntity
-        {
-            throw new NotImplementedException();
-        }
-
         public IList<User> GetUsers()
         {
-            //TODO
-            //get_users
-
             OracleCommand cmd = new OracleCommand("get_function.get_users", connection)
             {
                 CommandType = System.Data.CommandType.StoredProcedure
@@ -833,16 +836,6 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
                 var list = new List<User>();
                 while (rd.Read())
                 {
-                    // System.Diagnostics.Debug.WriteLine(rdr.GetInt32(0) + rdr.GetString(1) + rdr.GetString(2) + rdr.GetString(3));
-                    /*{< ID_ATTRACTION = 10,NAME = ceva,DESCRIPTION = o descriere,OPEN_TIME = 05 - NOV - 19,
-                     * CLOSE_TIME = 05 - NOV - 19,CREATE_ATTRACTION_TIME = 05 - NOV - 19,
-                     * IMAGE_PATH =/ img / ceva,LOCATION_ID_LOCATION = 26,ATT_TYPE_ID_ATTRACTION_TYPE = 2,
-                     * USER_ID_USER = 2,
-                     * RATING = 1,PHONE_NUMBER = 3123123,
-                     * TITLE = string,FIRST_NAME = dudu,
-                     * LAST_NAME = marin,
-                     * ADDRESS = undeva frumos,POSTAL_CODE = 1020312 >,}
-                    */
                     list.Add(new User()
                     {
                         Id = rd.GetInt32(0),
@@ -867,6 +860,98 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
 
         }
 
-        
+        public bool DeleteCommentById(int id)
+        {
+
+            OracleCommand cmd = new OracleCommand("delete_procedure.delete_comment",
+                connection)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+
+            cmd.Parameters.Add("v_comment_id", OracleDbType.Int32).Value = id;
+
+            try
+            {
+
+                if (cmd.Connection.State != ConnectionState.Open)
+                {
+                    cmd.Connection.Open();
+                }
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception e)
+            {
+                System.Diagnostics.Debug.WriteLine(e.ToString());
+                return false;
+            }
+            finally
+            {
+                DataBaseConnection.GetDbInstance().CloseDBConnection();
+            }
+        }
+
+        public bool DeleteAttractionById(int id)
+        {
+            OracleCommand cmd = new OracleCommand("delete_procedure.delete_attraction",
+                connection)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+
+            cmd.Parameters.Add("v_attraction_id", OracleDbType.Int32).Value = id;
+
+            try
+            {
+
+                if (cmd.Connection.State != ConnectionState.Open)
+                {
+                    cmd.Connection.Open();
+                }
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception e)
+            {
+                System.Diagnostics.Debug.WriteLine(e.ToString());
+                return false;
+            }
+            finally
+            {
+                DataBaseConnection.GetDbInstance().CloseDBConnection();
+            }
+        }
+
+        public bool DeleteAttractionTypeById(int id)
+        {
+            OracleCommand cmd = new OracleCommand("delete_procedure.delete_attractiontype",
+                connection)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+
+            cmd.Parameters.Add("v_attractiontype_id", OracleDbType.Int32).Value = id;
+
+            try
+            {
+
+                if (cmd.Connection.State != ConnectionState.Open)
+                {
+                    cmd.Connection.Open();
+                }
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception e)
+            {
+                System.Diagnostics.Debug.WriteLine(e.ToString());
+                return false;
+            }
+            finally
+            {
+                DataBaseConnection.GetDbInstance().CloseDBConnection();
+            }
+        }
     }
 }

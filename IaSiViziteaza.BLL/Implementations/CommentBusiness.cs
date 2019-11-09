@@ -43,11 +43,7 @@ namespace IaSiViziteaza.BLL.Implementations
 
         public bool DeleteCommentById(int id)
         {
-            //var x = _repository.GetUserByEmail(userEmail);
-            //if (_repository.CheckUserPriority(x, 20)==false)
-            //    return false;
-
-            return _repository.Delete<Comment>(id);
+            return _repository.DeleteCommentById(id);
         }
 
 

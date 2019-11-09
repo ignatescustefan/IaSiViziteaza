@@ -18,11 +18,11 @@ namespace IaSiViziteaza.Controllers
         {
             _business = bussines;
         }
-        // GET: api/Location/5
-        [HttpGet("{id}", Name = "GetLocationById")]
-        public ActionResult Get(int id)
-        {
-            return Ok(_business.GetLocationById(id));
-        }
+        //// GET: api/Location/5
+        //[HttpGet("{id}", Name = "GetLocationById")]
+        //public ActionResult Get(int id)
+        //{
+        //    return Ok(_business.GetLocationById(id));
+        //}
     }
 }

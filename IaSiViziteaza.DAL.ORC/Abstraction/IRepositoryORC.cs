@@ -8,9 +8,6 @@ namespace IaSiViziteaza.DAL.ORC.Abstraction
 {
     public interface IRepositoryORC
     {
-        TEntity GetEntityById<TEntity>(int id)
-            where TEntity : BaseEntity;
-
         void AddAttractionType(AttractionType attractionType);
 
         int AddLocation(Location location);
@@ -47,10 +44,11 @@ namespace IaSiViziteaza.DAL.ORC.Abstraction
         IList<Attraction> GetAttractions();
 
         void UpdateCommentById(int id, bool status);
+        bool DeleteCommentById(int id);
         void UpdateRatingAttractionById(int id, bool status);
 
-        bool Delete<TEntity>(int id)
-            where TEntity : BaseEntity;
         void UpdateUserInformation(User user, string currentEmail);
+        bool DeleteAttractionById(int id);
+        bool DeleteAttractionTypeById(int id);
     }
 }
