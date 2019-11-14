@@ -11,9 +11,8 @@ namespace IaSiViziteaza.BLL.Implementations
     public class UserBusiness : IUserBusiness
     {
         private readonly IRepositoryORC _repository;
-        private readonly int NormalUser =2;
-        private readonly int AdminUser = 3;
-     //   private readonly Guid MaxUser = Guid.Parse("15da1bd7-9832-4426-fbc3-08d706cf10c5");
+        private readonly int NormalUser =1;
+        private readonly int AdminUser = 2;
 
         public UserBusiness(IRepositoryORC repository)
         {
