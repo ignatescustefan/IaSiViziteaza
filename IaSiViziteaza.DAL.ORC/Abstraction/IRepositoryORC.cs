@@ -12,7 +12,7 @@ namespace IaSiViziteaza.DAL.ORC.Abstraction
 
         int AddLocation(Location location);
 
-        void AddAttraction(Attraction attraction);
+        bool AddAttraction(Attraction attraction);
 
         void AddUser(User user);
 

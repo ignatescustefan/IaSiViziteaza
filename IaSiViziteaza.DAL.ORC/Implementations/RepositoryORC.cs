@@ -81,7 +81,7 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
             return 0;
         }
 
-        public void AddAttraction(Attraction attraction)
+        public bool AddAttraction(Attraction attraction)
         {
             OracleCommand cmd = new OracleCommand("insert_procedure.insert_attraction",
                 connection)
@@ -107,10 +107,13 @@ namespace IaSiViziteaza.DAL.ORC.Implementations
                     cmd.Connection.Open();
                 }
                 cmd.ExecuteNonQuery();
+                return true;
+
             }
             catch (Exception e)
             {
                 System.Diagnostics.Debug.WriteLine(e.ToString());
+                return false;
             }
             finally
             {

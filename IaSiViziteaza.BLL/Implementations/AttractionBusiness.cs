@@ -29,7 +29,7 @@ namespace IaSiViziteaza.BLL.Implementations
                 Address = attractionDTO.Address,
                 PostalCode = attractionDTO.PostalCode
             };
-            _repository.AddAttraction(new Attraction()
+            return _repository.AddAttraction(new Attraction()
             {
                 AttractionType = attractionType,
                 User = user,
@@ -43,8 +43,7 @@ namespace IaSiViziteaza.BLL.Implementations
                 Location = location,
                 ImagePath = @attractionDTO.Base64ToImage(attractionDTO.Image),
             });
-            return true;
-
+            
         }
 
         public bool DeleteAttractionById(int id)
