@@ -1,26 +1,22 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "C:\\Users\\Stefan\\source\\Workspaces\\Workspace\\IaSiViziteaza\\IaSiViziteaza.BLL\\IaSiViziteaza.BLL.csproj",
+    "projectUniqueName": "/media/stefan/AA2ECBB72ECB7AB9/Users/Stefan/Desktop/PSBD-Proiect/IaSiViziteaza.BLL/IaSiViziteaza.BLL.csproj",
     "projectName": "IaSiViziteaza.BLL",
-    "projectPath": "C:\\Users\\Stefan\\source\\Workspaces\\Workspace\\IaSiViziteaza\\IaSiViziteaza.BLL\\IaSiViziteaza.BLL.csproj",
-    "outputPath": "C:\\Users\\Stefan\\source\\Workspaces\\Workspace\\IaSiViziteaza\\IaSiViziteaza.BLL\\obj\\",
+    "projectPath": "/media/stefan/AA2ECBB72ECB7AB9/Users/Stefan/Desktop/PSBD-Proiect/IaSiViziteaza.BLL/IaSiViziteaza.BLL.csproj",
+    "outputPath": "/media/stefan/AA2ECBB72ECB7AB9/Users/Stefan/Desktop/PSBD-Proiect/IaSiViziteaza.BLL/obj/",
     "projectStyle": "PackageReference",
-    "fallbackFolders": [
-      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-    ],
     "originalTargetFrameworks": [
       "netcoreapp2.2"
     ],
     "sources": {
-      "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
       "https://api.nuget.org/v3/index.json": {}
     },
     "frameworks": {
       "netcoreapp2.2": {
         "projectReferences": {
-          "C:\\Users\\Stefan\\source\\Workspaces\\Workspace\\IaSiViziteaza\\IaSiViziteaza.DAL\\IaSiViziteaza.DAL.csproj": {
-            "projectPath": "C:\\Users\\Stefan\\source\\Workspaces\\Workspace\\IaSiViziteaza\\IaSiViziteaza.DAL\\IaSiViziteaza.DAL.csproj"
+          "/media/stefan/AA2ECBB72ECB7AB9/Users/Stefan/Desktop/PSBD-Proiect/IaSiViziteaza.DAL.ORC/IaSiViziteaza.DAL.ORC.csproj": {
+            "projectPath": "/media/stefan/AA2ECBB72ECB7AB9/Users/Stefan/Desktop/PSBD-Proiect/IaSiViziteaza.DAL.ORC/IaSiViziteaza.DAL.ORC.csproj"
           }
         }
       }
@@ -42,7 +38,12 @@
         }
       },
       "imports": [
-        "net461"
+        "net461",
+        "net462",
+        "net47",
+        "net471",
+        "net472",
+        "net48"
       ],
       "assetTargetFallback": true,
       "warn": true

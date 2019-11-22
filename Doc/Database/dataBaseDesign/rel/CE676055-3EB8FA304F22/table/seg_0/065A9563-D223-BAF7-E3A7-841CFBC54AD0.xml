@@ -1,0 +1,217 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="065A9563-D223-BAF7-E3A7-841CFBC54AD0" name="ATTRACTION">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-10-17 08:17:12 UTC</createdTime>
+<generatorID>B7C39AC2-8D4B-08B5-FF2B-0D6C4C781A2A</generatorID>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_attraction" id="1E8E5930-4F6F-F1BF-E94A-AA0DA4FC8E84">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-10-17 08:17:12 UTC</createdTime>
+<generatorID>E88CFCCD-BE61-E8C0-970F-B81964C9875D</generatorID>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementGenerateTrigger>false</autoIncrementGenerateTrigger>
+</Column>
+<Column name="name" id="85D1B6D2-4279-E98B-66C1-649339E07EE3">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-10-17 08:17:12 UTC</createdTime>
+<generatorID>011B7186-C905-5434-E860-4FE461E93FEA</generatorID>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="description" id="6176C0C1-6B0A-3457-46BC-B16082381FEC">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-10-17 08:17:12 UTC</createdTime>
+<generatorID>68037C1E-4DE3-4A03-59F6-8B09B1371A05</generatorID>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+<ownDataTypeParameters>60,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="open_time" id="1C7CD706-6454-894C-00B9-EEDDA54A25FD">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-10-17 08:17:12 UTC</createdTime>
+<generatorID>4B938C3E-9FA5-0AFA-E5F2-460F5EE97820</generatorID>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT014</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="close_time" id="E069595E-CB71-D672-BCE8-82D432A8B8E0">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-10-17 08:17:12 UTC</createdTime>
+<generatorID>114B17CD-0627-BDCE-7B75-84B1B8022856</generatorID>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT014</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="create_attraction_time" id="97F01468-BD68-349A-D180-1B3129597B96">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-10-17 08:17:12 UTC</createdTime>
+<generatorID>A24E59D9-7C8B-71FC-7AAB-61827AA21D25</generatorID>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="image_path" id="3A413205-DFC4-427E-9E76-62BB7D3CB931">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-10-17 08:17:12 UTC</createdTime>
+<generatorID>AD972F6E-99CB-657D-985A-71DFA5429F1B</generatorID>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="rating" id="E52E592C-B6EA-30B7-3912-DDF0F6DCACAE">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-11-06 09:26:00 UTC</createdTime>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<defaultOntNull>true</defaultOntNull>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_location" id="1C3DD78C-BF1B-CCCD-D74C-03303A34CD2A">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-10-17 08:17:12 UTC</createdTime>
+<generatorID>2EBB01B6-272F-A103-90D7-02A9D0DE3948</generatorID>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="ACEF35AC-7843-0D04-79B8-3A0F8FDF10D2" referredColumn="9D268128-4099-2F1D-EC05-83768422BFDA"/>
+</associations>
+</Column>
+<Column name="id_attraction_type" id="FAEDDDA4-0B2C-1D05-A6AD-D4B33954FD9F">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-10-17 08:17:12 UTC</createdTime>
+<generatorID>C5E0322F-D00B-4E39-8A2E-0EDA387A8DD5</generatorID>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F57DB508-14CD-3294-5C91-591F8945E93B" referredColumn="66DF567F-95FD-5CB7-44DE-E937C4DA7994"/>
+</associations>
+</Column>
+<Column name="id_user" id="AD29F794-4D39-32F6-F4D6-AA79169E4786">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-10-17 08:17:12 UTC</createdTime>
+<generatorID>51ADBD61-9F0C-89C3-47BE-796EC690D867</generatorID>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5CEA0C7F-4B83-04D6-04ED-3404DB72C994" referredColumn="E52427F9-7F8E-1E62-B46C-293801449B42"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F987B782-C3B0-F288-1F7C-6A56431D5813" name="ATTRACTION_PK">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-10-17 08:17:12 UTC</createdTime>
+<generatorID>44564D62-7D0B-A0A8-AF6B-F84AA2153377</generatorID>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1E8E5930-4F6F-F1BF-E94A-AA0DA4FC8E84"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1FE11C22-BC27-D752-E77E-454776B263B9" name="ATTRACTION__IDX">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-11-22 10:33:44 UTC</createdTime>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>3734C205-C958-8C9D-F5B0-E6EB598CDE66</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="1C3DD78C-BF1B-CCCD-D74C-03303A34CD2A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C764981B-B554-1CB1-982C-66CFCF048E6F" name="ATTR_TO_LOC">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-10-17 08:17:12 UTC</createdTime>
+<generatorID>3734C205-C958-8C9D-F5B0-E6EB598CDE66</generatorID>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1C3DD78C-BF1B-CCCD-D74C-03303A34CD2A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EEAB2D30-FE05-09CA-A58C-52456EDABA12" name="ATTR_TO_TYPE">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-10-17 08:17:12 UTC</createdTime>
+<generatorID>DA663B93-0951-5036-CD27-B89A6504DD27</generatorID>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FAEDDDA4-0B2C-1D05-A6AD-D4B33954FD9F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="39F11C50-0C5C-7993-187A-35E016360ED7" name="USER_TO_ATTR">
+<createdBy>Stefan</createdBy>
+<createdTime>2019-10-17 08:17:12 UTC</createdTime>
+<generatorID>97EEE7BD-6AA9-6195-76E8-003CBFB90748</generatorID>
+<ownerDesignName>dataBaseDesign</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AD29F794-4D39-32F6-F4D6-AA79169E4786"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

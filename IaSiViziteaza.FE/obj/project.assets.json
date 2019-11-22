@@ -12074,30 +12074,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Stefan\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "/home/stefan/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Stefan\\source\\Workspaces\\Workspace\\IaSiViziteaza\\IaSiViziteaza.FE\\IaSiViziteaza.FE.csproj",
+      "projectUniqueName": "/media/stefan/AA2ECBB72ECB7AB9/Users/Stefan/Desktop/PSBD-Proiect/IaSiViziteaza.FE/IaSiViziteaza.FE.csproj",
       "projectName": "IaSiViziteaza.FE",
-      "projectPath": "C:\\Users\\Stefan\\source\\Workspaces\\Workspace\\IaSiViziteaza\\IaSiViziteaza.FE\\IaSiViziteaza.FE.csproj",
-      "packagesPath": "C:\\Users\\Stefan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Stefan\\source\\Workspaces\\Workspace\\IaSiViziteaza\\IaSiViziteaza.FE\\obj\\",
+      "projectPath": "/media/stefan/AA2ECBB72ECB7AB9/Users/Stefan/Desktop/PSBD-Proiect/IaSiViziteaza.FE/IaSiViziteaza.FE.csproj",
+      "packagesPath": "/home/stefan/.nuget/packages/",
+      "outputPath": "/media/stefan/AA2ECBB72ECB7AB9/Users/Stefan/Desktop/PSBD-Proiect/IaSiViziteaza.FE/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Stefan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/home/stefan/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.2"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -12133,7 +12127,12 @@
           }
         },
         "imports": [
-          "net461"
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
         ],
         "assetTargetFallback": true,
         "warn": true
